@@ -41,13 +41,13 @@ budgeted probes, constructor/iota/K/Quot reduction, dependent projections,
 and inductive validation. Nested types are specialized into temporary mutual
 types, then generated recursors are restored and compared with the export.
 
-All 15 Nat primitives use an interned base-2^32 limb arena. Successor
+All 15 Nat primitives use interned arrays of base-2^32 limbs. Successor
 compression, literal recursors, large-argument deferral/demand and UTF-8
 String expansion are connected. The executable calls no external kernel
 or arithmetic library.
 
-The exported Expr arena is immutable shared storage. Workers have private
-scratch arenas, interners and caches; OpenMP dynamically schedules declarations.
+Exported expressions are held in immutable shared storage. Workers have private
+temporary storage, interners and caches; OpenMP dynamically schedules declarations.
 Serial mode retains cross-declaration caches with nanoclo's 2^22-expression
 epoch threshold. Parser maps use compact dense indices with a sparse fallback,
 and input bytes and parser staging are released before checking.

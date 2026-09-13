@@ -1,6 +1,6 @@
 version: "Fortran port of nanoclo 4cdd12f"
 description: |
-  Fortran 2018 port of nanoclo 4cdd12f, with struct-of-arrays arenas,
+  Fortran 2018 port of nanoclo 4cdd12f, with kernel objects stored in parallel arrays,
   shared immutable exported expressions, and private OpenMP checker contexts.
 # Local source checkout; adjust this path when installing on another machine.
 threads: 4

@@ -1,6 +1,7 @@
 # nanoclo-fortran
 
-A Fortran 2018 port of nanoclo's Lean 4 kernel with struct-of-arrays arenas.
+A Fortran 2018 port of nanoclo's Lean 4 kernel, storing kernel objects in
+parallel arrays referenced by integer IDs.
 **All 200 arena streams have the correct verdict: 127 accepts, 73 rejects,
 zero declines.** All 26 counters match Rust on every one of Init's 54,475
 declarations. The 15 additional arena `either` cases in that snapshot also match the pinned Rust verdicts,
@@ -31,7 +32,7 @@ The checker implements closure inference, lazy evaluation/conversion,
 inductive positivity and recursor validation, nested inductives, Quot, all
 15 Nat primitives with arbitrary-precision arithmetic, and UTF-8 String
 literal expansion. Worker contexts share immutable exported expressions
-and keep private scratch arenas and caches. The default `--jobs=1` mode
+and keep private temporary storage and caches. The default `--jobs=1` mode
 retains cross-declaration caches.
 
 Options use `=`: `--jobs=N`, `--nat-extension=true|false`,
