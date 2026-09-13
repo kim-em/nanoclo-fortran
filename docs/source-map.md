@@ -38,8 +38,9 @@ retains these caches and resets them at a 2^22-expression scratch epoch.
 Per-declaration values, environments and conversion caches reset in both modes.
 
 Export ID maps use dense integer arrays for ordinary sequential IDs and a
-sparse hash fallback for large/out-of-order IDs. The parser releases staging
-maps, JSON tokens and input bytes before kernel checking. Read-set caching
+sparse hash fallback for large/out-of-order IDs. The CLI streams input through a 1 MiB buffer, growing it only for a longer
+individual record. The parser releases staging maps and JSON tokens before kernel
+checking. Read-set caching
 stores only visited expressions; its reset cost is independent of the full
 export's expression count.
 

@@ -1,0 +1,33 @@
+{
+  "arena_metadata": {
+    "timestamp": "2026-09-13 16:47:18 UTC",
+    "git_revision": "512ee87e6209bda5004cb38789ba424a1b04ee93",
+    "git_revision_short": "512ee87e",
+    "github_url": "https://github.com/leanprover/lean-kernel-arena/commit/512ee87e6209bda5004cb38789ba424a1b04ee93",
+    "github_action_url": "https://github.com/leanprover/lean-kernel-arena/actions/runs/34755147921",
+    "round": null,
+    "doi": null,
+    "zenodo_deposition": null,
+    "github_run_id": "34755147921"
+  },
+  "result": {
+    "checker": "nanoclo-fortran",
+    "test": "mathlib",
+    "status": "error",
+    "correctness": "error",
+    "exit_code": 137,
+    "wall_time": 73.318797874,
+    "cpu_time": 72.24918707,
+    "max_rss": 15249715200,
+    "instructions": 600597103713,
+    "stdout": "",
+    "stderr": ""
+  },
+  "local_reproduction": {
+    "memory_limit_bytes": 12884901888,
+    "swap_limit_bytes": 0,
+    "result": "oom-kill",
+    "binary_sha256": "57b72b8327e1952d6cd1e8616a599dcdda8f7bf1a1b8f26eda8b83791812192e",
+    "systemd_result": "Result=oom-kill\nExecMainCode=2\nExecMainStatus=15\nMemoryPeak=12884901888\nMemoryMax=12884901888\nMemorySwapMax=0\n"
+  }
+}

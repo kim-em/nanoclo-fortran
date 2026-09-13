@@ -29,6 +29,10 @@ module parser
   contains
     procedure :: release_parser_storage
     procedure :: scan
+    procedure :: scan_file
+    procedure :: begin_scan
+    procedure :: scan_line
+    procedure :: end_scan
     procedure :: record
     procedure :: lookup
     procedure :: expr_record
@@ -51,35 +55,114 @@ contains
     self%tokens=json_tokens()
     if (allocated(self%scratch_idxs)) deallocate(self%scratch_idxs)
   end subroutine
+  subroutine begin_scan(self)
+    class(export_parser), intent(inout) :: self
+    call self%bignums%init(); call self%names%init(); call self%levels%init(); call self%lists%init()
+    call self%name_map%put(0,0,0,0,anonymous)
+    call self%level_map%put(0,0,0,0,zero)
+  end subroutine
+  subroutine scan_line(self,bytes,status)
+    class(export_parser), intent(inout) :: self
+    character, intent(in) :: bytes(:)
+    type(status_t), intent(inout) :: status
+    character(32) :: line_text
+    call self%tokens%parse(bytes,status)
+    if (status%code==accept) call self%record(bytes,status)
+    if (status%code/=accept) then
+      write(line_text,'(i0)') self%records+1
+      status%message='line '//trim(line_text)//': '//status%message
+      return
+    end if
+    self%records=self%records+1
+  end subroutine
+  subroutine end_scan(self,status)
+    class(export_parser), intent(inout) :: self
+    type(status_t), intent(inout) :: status
+    if (self%records==0) call status%fail(decline,'missing export metadata')
+    self%exprs%current_origin=1
+  end subroutine
   subroutine scan(self,bytes,status)
     class(export_parser), intent(inout) :: self
     character, intent(in) :: bytes(:)
     type(status_t), intent(inout) :: status
-    integer(int64) :: first,last,line
-    character(32) :: line_text
-    call self%bignums%init(); call self%names%init(); call self%levels%init(); call self%lists%init()
-    call self%name_map%put(0,0,0,0,anonymous)
-    call self%level_map%put(0,0,0,0,zero)
-    first=1; line=0
+    integer(int64) :: first,last
+    call self%begin_scan()
+    first=1
     do while(first<=size(bytes,kind=int64))
       last=first
       do while(last<=size(bytes,kind=int64))
         if (bytes(last)==achar(10)) exit
         last=last+1
       end do
-      line=line+1
-      call self%tokens%parse(bytes(first:last-1),status)
-      if (status%code==accept) call self%record(bytes(first:last-1),status)
-      if (status%code/=accept) then
-        write(line_text,'(i0)') line
-        status%message='line '//trim(line_text)//': '//status%message
-        return
-      end if
-      self%records=self%records+1
+      call self%scan_line(bytes(first:last-1),status)
+      if (status%code/=accept) return
       first=last+1
     end do
-    if (self%records==0) call status%fail(decline,'missing export metadata')
-    self%exprs%current_origin=1
+    call self%end_scan(status)
+  end subroutine
+  subroutine scan_file(self,path,status)
+    class(export_parser), intent(inout) :: self
+    character(*), intent(in) :: path
+    type(status_t), intent(inout) :: status
+    character, allocatable :: buffer(:),larger(:)
+    integer, parameter :: chunk=1048576
+    integer :: unit,ios,used,first,last,nread,capacity,new_capacity
+    integer(int64) :: file_size,offset
+    character(512) :: message
+    open(newunit=unit,file=path,access='stream',form='unformatted',status='old',action='read', &
+         iostat=ios,iomsg=message)
+    if (ios/=0) then
+      call status%fail(kernel_error,'open: '//trim(message)); return
+    end if
+    inquire(unit=unit,size=file_size,iostat=ios,iomsg=message)
+    if (ios/=0 .or. file_size<0) then
+      close(unit); call status%fail(kernel_error,'cannot determine input size'); return
+    end if
+    capacity=chunk
+    allocate(buffer(capacity),stat=ios)
+    if (ios/=0) then
+      close(unit); call status%fail(kernel_error,'cannot allocate input buffer'); return
+    end if
+    call self%begin_scan()
+    used=0; offset=0; last=1
+    do while(offset<file_size)
+      if (used==capacity) then
+        ! Only a single long record can grow the buffer beyond one chunk.
+        if (capacity==huge(capacity)) then
+          call status%fail(decline,'JSON record exceeds index range'); exit
+        end if
+        new_capacity=int(min(2_int64*capacity,int(huge(capacity),int64)))
+        allocate(larger(new_capacity),stat=ios)
+        if (ios/=0) then
+          call status%fail(kernel_error,'cannot grow input buffer'); exit
+        end if
+        larger(:used)=buffer(:used)
+        call move_alloc(larger,buffer); capacity=new_capacity
+      end if
+      nread=int(min(int(capacity-used,int64),file_size-offset))
+      read(unit,iostat=ios,iomsg=message) buffer(used+1:used+nread)
+      if (ios/=0) then
+        call status%fail(kernel_error,'read: '//trim(message)); exit
+      end if
+      used=used+nread; offset=offset+nread; first=1
+      ! Resume at the first new byte: do not rescan an incomplete long record.
+      do while(last<=used)
+        if (buffer(last)==achar(10)) then
+          call self%scan_line(buffer(first:last-1),status)
+          if (status%code/=accept) exit
+          first=last+1
+        end if
+        last=last+1
+      end do
+      if (status%code/=accept) exit
+      used=used-first+1
+      if (used>0 .and. first>1) buffer(:used)=buffer(first:first+used-1)
+      last=used+1
+    end do
+    close(unit)
+    if (status%code/=accept) return
+    if (used>0) call self%scan_line(buffer(:used),status)
+    if (status%code==accept) call self%end_scan(status)
   end subroutine
   integer function indexed_uint(self,bytes,obj,key,status) result(n)
     class(export_parser), intent(in) :: self

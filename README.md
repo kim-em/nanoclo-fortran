@@ -28,6 +28,9 @@ export OMP_STACKSIZE=1G
 build/nanoclo-fortran --jobs=4 /path/to/export.ndjson
 ```
 
+Input is read in bounded chunks, avoiding a second in-memory copy of the entire
+export. See the [Mathlib memory fix](docs/mathlib-memory-fix.md).
+
 The checker implements closure inference, lazy evaluation/conversion,
 inductive positivity and recursor validation, nested inductives, Quot, all
 15 Nat primitives with arbitrary-precision arithmetic, and UTF-8 String

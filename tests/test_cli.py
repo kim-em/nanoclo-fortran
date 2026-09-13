@@ -83,6 +83,34 @@ with tempfile.TemporaryDirectory() as directory:
         path.write_bytes(data)
         run(path, 2)
 
+# File parsing must preserve records across chunk boundaries, including UTF-8,
+# JSON escapes, CRLF, long records and a final line without a newline.
+with tempfile.TemporaryDirectory() as directory:
+    path = Path(directory) / "chunked.ndjson"
+    header = json.dumps(meta).encode()
+    chunk = 1048576
+    for boundary in [chunk-1, chunk, chunk+1, 2*chunk+3]:
+        prefix = header + b"\n" + b'{' + b' ' * (boundary-len(header)-3)
+        record = b'"in": 1, "str": {"pre": 0, "str": "' + "λ😀".encode() + b'\\n"}}'
+        for ending in [b"", b"\n", b"\r\n"]:
+            path.write_bytes(prefix + record + ending)
+            output = run(path)
+            assert "records=2\n" in output
+            assert "names=1\n" in output
+    # Position the split inside a UTF-8 sequence and inside a JSON escape.
+    for tail in ["😀".encode()+b'"}}', b'\\u03bb"}}']:
+        prefix = header+b'\n{"in":1,"str":{"pre":0,"str":"'
+        path.write_bytes(prefix+b'a'*(chunk-len(prefix)-1)+tail)
+        assert "records=2\n" in run(path)
+    path.write_bytes(header+b"\n"+b" "*(chunk+17)+b"{}\n")
+    r = subprocess.run([exe, "--scan", str(path)], capture_output=True, text=True)
+    assert r.returncode == 2 and "line 2:" in r.stderr, r.stderr
+    checks += 1
+    path.write_bytes(header+b"\n\n")
+    r = subprocess.run([exe, "--scan", str(path)], capture_output=True, text=True)
+    assert r.returncode == 2 and "line 2:" in r.stderr, r.stderr
+    checks += 1
+
 for root in map(Path, sys.argv[2:]):
     files = [root] if root.is_file() else sorted(root.rglob("*.ndjson"))
     for path in files:

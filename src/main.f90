@@ -3,7 +3,6 @@ program nanoclo_fortran
   use kernel, only: checker
   implicit none
   type(checker) :: ck
-  character, allocatable :: bytes(:)
   character(:), allocatable :: path,arg
   integer :: n,i,ios,jobs
   logical :: scan_only
@@ -60,10 +59,8 @@ program nanoclo_fortran
     deallocate(arg)
   end do
   if (len(path)==0) call ck%status%fail(kernel_error,'missing input path')
-  if (ck%status%code==accept) call read_bytes(path,bytes,ck%status)
   ck%ctx%nat_extension=ck%nat_extension; ck%ctx%string_extension=ck%string_extension
-  if (ck%status%code==accept) call ck%ctx%scan(bytes,ck%status)
-  if (allocated(bytes)) deallocate(bytes)
+  if (ck%status%code==accept) call ck%ctx%scan_file(path,ck%status)
   if (ck%status%code==accept) then
     if (scan_only) then
       print '(a,i0)', 'records=',ck%ctx%records
