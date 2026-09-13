@@ -18,3 +18,9 @@ about 15.4 virtual CPU minutes, with a historical 14.295 GiB peak RSS.
 Please include the large tests in upstream validation; PR CI ordinarily skips
 some of these inputs. The repository's `docs/submission.md` records the release
 and resource-validation evidence. Local results are not an upstream CI run.
+
+Release validation: [CI](https://github.com/kim-em/nanoclo-fortran/actions/runs/34749257397) passes the component suites
+and 207 bundled small cases in release and checked-debug builds. A fresh clone
+builds through unmodified arena tooling and passes all 207 small cases through
+its runner. Mathlib also accepts under a 16,000,000,000-byte cgroup with swap
+disabled and zero OOM events. The repository retains the raw resource evidence.

@@ -1,0 +1,32 @@
+{
+  "binary_sha256": "57b72b8327e1952d6cd1e8616a599dcdda8f7bf1a1b8f26eda8b83791812192e",
+  "input_sha256": "ca2ec20fd063b61e71867b2975c81bd989af9f879b4886b8f08cd23c767a47bb",
+  "jobs": 4,
+  "cgroup": "/sys/fs/cgroup/user.slice/user-1003.slice/user@1003.service/app.slice/nanoclo-fortran-submission-memory-20260913.service",
+  "before": {
+    "memory.max": "16000000000",
+    "memory.swap.max": "0",
+    "memory.peak": "4467838976",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+    "memory.swap.peak": "0",
+    "memory.current": "4467838976"
+  },
+  "command": [
+    "/home/kim/nanoclo-fortran/build/optimized/nanoclo-fortran",
+    "--jobs=4",
+    "/home/kim/nanoclo-fortran/_tmp/arena-large/good/mathlib.ndjson"
+  ],
+  "OMP_STACKSIZE": "1G",
+  "memory_limit_bytes": 16000000000,
+  "swap_limit_bytes": 0,
+  "process_status": 0,
+  "wall_seconds": 1189.3124435800128,
+  "after": {
+    "memory.max": "16000000000",
+    "memory.swap.max": "0",
+    "memory.peak": "16000000000",
+    "memory.events": "low 0\nhigh 0\nmax 3448\noom 0\noom_kill 0\noom_group_kill 0",
+    "memory.swap.peak": "0",
+    "memory.current": "34074624"
+  }
+}
