@@ -1,0 +1,91 @@
+{
+  "conclusion": "success",
+  "head_sha": "c65af64db73fd41b757d2227193914fcf5188d5d",
+  "jobs": [
+    {
+      "completedAt": "2026-09-13T10:42:12Z",
+      "conclusion": "success",
+      "databaseId": 103710179732,
+      "name": "regression",
+      "startedAt": "2026-09-13T10:31:25Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-09-13T10:31:27Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-09-13T10:31:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-13T10:31:31Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "startedAt": "2026-09-13T10:31:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-13T10:31:36Z",
+          "conclusion": "success",
+          "name": "Run cachix/install-nix-action@v31",
+          "number": 3,
+          "startedAt": "2026-09-13T10:31:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-13T10:33:39Z",
+          "conclusion": "success",
+          "name": "Release regression suite",
+          "number": 4,
+          "startedAt": "2026-09-13T10:31:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-13T10:36:09Z",
+          "conclusion": "success",
+          "name": "Pinned arena corpus (four workers)",
+          "number": 5,
+          "startedAt": "2026-09-13T10:33:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-13T10:36:19Z",
+          "conclusion": "success",
+          "name": "Bounds and overflow checks",
+          "number": 6,
+          "startedAt": "2026-09-13T10:36:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-13T10:42:09Z",
+          "conclusion": "success",
+          "name": "Pinned arena corpus with runtime checks",
+          "number": 7,
+          "startedAt": "2026-09-13T10:36:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-13T10:42:10Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 14,
+          "startedAt": "2026-09-13T10:42:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-09-13T10:42:10Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-09-13T10:42:10Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/kim-em/nanoclo-fortran/actions/runs/34752071630/job/103710179732"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/kim-em/nanoclo-fortran/actions/runs/34752071630"
+}
