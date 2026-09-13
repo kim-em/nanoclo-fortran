@@ -1,5 +1,5 @@
-Adds a Fortran 2018 port of nanoclo, storing kernel objects in parallel arrays and checking with four OpenMP workers. Pins a release commit and a reproducible Nix build.
+Update nanoclo-fortran to stream its NDJSON input instead of retaining the full 5.2 GiB Mathlib export during parsing, addressing the published exit-137 failure. Kernel algorithms are unchanged.
 
-All 215 current cases are covered with zero declines. Release/debug CI passes the 207 small cases, all 26 counters match nanoclo on Init, and Mathlib passes a 16 GB memory limit with swap disabled. Please include the large tests in upstream validation.
+Full Mathlib accepts under a 14 GiB memory cap with swap disabled and zero OOM events. All seven other large tests and 207 small release/debug cases pass; all 26 Init counters match nanoclo. [Validation evidence](https://github.com/kim-em/nanoclo-fortran/blob/main/docs/mathlib-memory-fix.md) and [passing CI](https://github.com/kim-em/nanoclo-fortran/actions/runs/34787793763). Please include Mathlib in the next full arena run; PR CI skips it.
 
 :robot: prepared with Codex

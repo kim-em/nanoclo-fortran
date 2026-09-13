@@ -7,7 +7,7 @@ description: |
   on every Init declaration. Supports nested inductives and Nat/String literals.
 url: https://github.com/kim-em/nanoclo-fortran
 ref: main
-rev: "c65af64db73fd41b757d2227193914fcf5188d5d"
+rev: "b3a13ef5f0ae98a56087bef11ee1ec80dde0ef30"
 threads: 4
 build: nix develop --command make
 run: |

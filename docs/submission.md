@@ -1,66 +1,61 @@
 # Kernel Arena submission
 
-The repository is public. [The upstream PR](https://github.com/leanprover/lean-kernel-arena/pull/198) adds the checker pinned to
-`c65af64db73fd41b757d2227193914fcf5188d5d`. Its [release CI](https://github.com/kim-em/nanoclo-fortran/actions/runs/34752071630) passed before the PR was opened.
-The [submission bundle](../arena/submission/README.md) contains the checker YAML,
-patch, release metadata and submitted PR text.
+[The submission update PR](https://github.com/leanprover/lean-kernel-arena/pull/204) pins release `b3a13ef5f0ae98a56087bef11ee1ec80dde0ef30` to fix the Mathlib
+memory failure. The [initial PR](https://github.com/leanprover/lean-kernel-arena/pull/198)
+was merged with release `c65af64db73fd41b757d2227193914fcf5188d5d`.
+The repository is public, and the [submission bundle](../arena/submission/README.md)
+contains the updated checker YAML, patch, release metadata and submitted PR text.
 
 ## Current coverage
 
-Validation targets Lean Kernel Arena
-`ac1c13762de41b594fa24b90ede8cfd97ac6a765`. Its 215 cases comprise **198 scored**
-(127 accept, 71 reject) and **17 open-outcome** cases. All scored verdicts are
-correct; open-outcome verdicts match pinned nanoclo `4cdd12f`. There are **zero
-declines**. [Current corpus manifest](submission-corpus.json).
+Validation covers all **215 current cases**: **198 scored** (127 accept,
+71 reject) and **17 open-outcome** cases. All scored verdicts are correct;
+open-outcome verdicts match pinned nanoclo `4cdd12f`. There are **zero declines**.
+The [corpus manifest](submission-corpus.json) was prepared at arena
+`ac1c13762de41b594fa24b90ede8cfd97ac6a765`; tests and tutorial definitions remain
+unchanged at the update's base `62c45f880410e3a320be72b80be32beb2a6d4e19`.
 
-The eta cases were moved from the rejection tutorial into open-outcome corner
-cases, and later tutorial names were renumbered. Every current small scored
-input retains a previously validated hash. The eight large export definitions
-retain their semantic inputs. Historical 200-case performance tables preserve
-their original names and classifications.
+The eta cases were moved from rejection tutorials into open-outcome corner
+cases, and later tutorial names were renumbered. Historical 200-case performance
+tables retain their original names and classifications.
 
-All 26 counters match on Init’s 54,475 declarations, all 119 accepted small scored
-fixtures and the eight accepted open-outcome fixtures. The comparison harness
-sets the required stack limit itself; this fixed a validation-only crash when
-`app-lam` was run with the shell’s 8 MiB default. Production source is unchanged
-from the optimized measurements.
+## Validation of the update
 
-## Build and runtime validation
+The checker streams the NDJSON input instead of retaining the entire 5.2 GiB
+Mathlib file during parsing. Kernel algorithms and storage layout are unchanged.
+[Diagnosis, implementation and validation](mathlib-memory-fix.md).
 
-- A pinned gfortran 15.3.0 Nix environment builds the pure-Fortran checker.
-- CI runs component/synthetic tests and all **207 bundled small fixtures** in
-  release mode with four workers and in checked-debug serial mode.
-  [Public release CI evidence](submission-public-ci.json).
-- An earlier clean private build passed all 207 small cases through the
-  unmodified arena runner. [Runner evidence](submission-arena-integration.json).
-- The public release was fetched and built through unmodified arena tooling
-  with Git credential configuration disabled. Source hashes match the measured
-  checker, the YAML schema validates, and the wrapper preserves accept, reject
-  and error statuses. [Public build evidence](submission-public-build.json).
-- Mathlib accepted with four workers under a **16,000,000,000-byte cgroup**, with
-  swap disabled and **zero OOM events**, in approximately 20 minutes on the shared
-  host. Charged memory reached the configured cap, including accounted file cache;
-  this differs from process RSS. Historical optimized peak RSS was 14.295 GiB.
-  [Physical-memory evidence](submission-memory.json).
+- Full Mathlib accepts with four workers under a **14 GiB physical-memory cap**,
+  swap disabled and **zero OOM events**. A stricter 12 GiB stress test still OOMs
+  during checking; that limit is not claimed. [Memory evidence](mathlib-streaming-memory.json).
+- All seven other large exports accept. [Results](streaming-large-tests.json).
+- Release and checked-debug component tests pass, including chunk-boundary and
+  malformed-input regressions. All **207 bundled small fixtures** pass with four
+  release workers and in checked-debug serial mode.
+  [Public CI](https://github.com/kim-em/nanoclo-fortran/actions/runs/34787793763), [job evidence](streaming-ci.json).
+- All 26 counters match on Init's 54,475 declarations, for both the measured
+  executable and a fresh public build. [Counter evidence](streaming-init-fidelity.json.gz).
+- Unmodified arena tooling anonymously fetched the pinned public source and built
+  it with the pinned gfortran 15.3.0 Nix environment. Production source hashes
+  match the tested checkout; the YAML schema and wrapper accept/reject/error
+  statuses validate. [Public build evidence](streaming-public-build.json).
 
-[Validation logs](submission-validation-logs.tar.gz) retain the earlier clean
-build, corpus runs, fidelity checks, memory check and private CI monitor.
-The [optimization report](optimization-report.md) retains performance evidence
-against the original nanoclo pin; it is not a current leaderboard ranking.
-Licensing and source attribution are in the repository’s LICENSE and NOTICE.
+[Build identities](streaming-environment.json) and
+[validation logs](streaming-validation-logs.tar.gz) retain this release's evidence.
+The earlier [16 GB memory test](submission-memory.json),
+[optimization report](optimization-report.md), and
+[original submission logs](submission-validation-logs.tar.gz) describe the
+previous binary. That local 16 GB test did not provide enough headroom for the
+actual arena runner. Licensing and source attribution are in LICENSE and NOTICE.
 
 ## Upstream follow-up
 
-The PR description requests validation including the large tests. The upstream
-PR workflow uses `build-test --skip-ci`, so a green PR job alone does not establish
-Mathlib coverage on its `nscloud-ubuntu-22.04-amd64-8x16` runner. Local cgroup
-validation does not replace an actual upstream CI result.
+The update PR requests validation including Mathlib. Upstream PR CI passes
+`build-test --skip-ci`, so a green PR job alone does not establish Mathlib coverage
+on the `nscloud-ubuntu-22.04-amd64-8x16` runner. The next full upstream run remains
+the final check on that environment.
 
 Future checker releases require explicit commit-pin updates. Regenerate the YAML
 with `scripts/prepare_arena_submission.py`; the development registration at
 `arena/nanoclo-fortran.yaml` uses a local absolute path and is separate from the
 portable submitted definition.
-
-References: [contributing a checker](https://github.com/leanprover/lean-kernel-arena/blob/ac1c13762de41b594fa24b90ede8cfd97ac6a765/README.md#contributing-checkers),
-[checker schema](https://github.com/leanprover/lean-kernel-arena/blob/ac1c13762de41b594fa24b90ede8cfd97ac6a765/schemas/checker.json),
-and [CI workflow](https://github.com/leanprover/lean-kernel-arena/blob/ac1c13762de41b594fa24b90ede8cfd97ac6a765/.github/workflows/build-and-deploy.yml).

@@ -1,29 +1,55 @@
 {
   "repository": "https://github.com/kim-em/nanoclo-fortran",
   "visibility": "public",
-  "release_revision": "c65af64db73fd41b757d2227193914fcf5188d5d",
-  "arena_revision": "ac1c13762de41b594fa24b90ede8cfd97ac6a765",
+  "release_revision": "b3a13ef5f0ae98a56087bef11ee1ec80dde0ef30",
+  "arena_revision": "62c45f880410e3a320be72b80be32beb2a6d4e19",
   "checker_definition": "arena/submission/nanoclo-fortran.yaml",
   "patch": "arena/submission/arena.patch",
-  "pr_title": "Add nanoclo-fortran checker",
+  "pr_title": "nanoclo-fortran: stream input to fix Mathlib memory failure",
   "pr_body": "arena/submission-pr.md",
   "upstream_pr_opened": true,
+  "upstream_pr_url": "https://github.com/leanprover/lean-kernel-arena/pull/204",
   "memory_check": {
     "process_status": 0,
-    "memory_limit_bytes": 16000000000,
+    "memory_limit_bytes": 15032385536,
     "swap_limit_bytes": 0,
     "oom_events": 0,
-    "evidence": "docs/submission-memory.json"
+    "evidence": "docs/mathlib-streaming-memory.json"
   },
-  "small_arena_runner_cases": 207,
-  "patch_applies_to_pinned_arena": true,
-  "previous_private_validation": {
-    "private_ci_run_id": 34749257397,
-    "private_ci_url": "https://github.com/kim-em/nanoclo-fortran/actions/runs/34749257397",
-    "private_ci_conclusion": "success"
-  },
-  "ci_run_id": 34752071630,
-  "ci_url": "https://github.com/kim-em/nanoclo-fortran/actions/runs/34752071630",
+  "small_release_and_debug_cases": 207,
+  "large_accepted_cases": 8,
+  "ci_run_id": 34787793763,
+  "ci_url": "https://github.com/kim-em/nanoclo-fortran/actions/runs/34787793763",
   "ci_conclusion": "success",
-  "upstream_pr_url": "https://github.com/leanprover/lean-kernel-arena/pull/198"
+  "anonymous_arena_build_evidence": "docs/streaming-public-build.json",
+  "validation_report": "docs/mathlib-memory-fix.md",
+  "previous_submission": {
+    "repository": "https://github.com/kim-em/nanoclo-fortran",
+    "visibility": "public",
+    "release_revision": "c65af64db73fd41b757d2227193914fcf5188d5d",
+    "arena_revision": "ac1c13762de41b594fa24b90ede8cfd97ac6a765",
+    "checker_definition": "arena/submission/nanoclo-fortran.yaml",
+    "patch": "arena/submission/arena.patch",
+    "pr_title": "Add nanoclo-fortran checker",
+    "pr_body": "arena/submission-pr.md",
+    "upstream_pr_opened": true,
+    "memory_check": {
+      "process_status": 0,
+      "memory_limit_bytes": 16000000000,
+      "swap_limit_bytes": 0,
+      "oom_events": 0,
+      "evidence": "docs/submission-memory.json"
+    },
+    "small_arena_runner_cases": 207,
+    "patch_applies_to_pinned_arena": true,
+    "previous_private_validation": {
+      "private_ci_run_id": 34749257397,
+      "private_ci_url": "https://github.com/kim-em/nanoclo-fortran/actions/runs/34749257397",
+      "private_ci_conclusion": "success"
+    },
+    "ci_run_id": 34752071630,
+    "ci_url": "https://github.com/kim-em/nanoclo-fortran/actions/runs/34752071630",
+    "ci_conclusion": "success",
+    "upstream_pr_url": "https://github.com/leanprover/lean-kernel-arena/pull/198"
+  }
 }
