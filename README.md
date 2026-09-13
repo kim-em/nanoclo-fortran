@@ -2,10 +2,10 @@
 
 A Fortran 2018 port of nanoclo's Lean 4 kernel, storing kernel objects in
 parallel arrays referenced by integer IDs.
-**All 200 arena streams have the correct verdict: 127 accepts, 73 rejects,
-zero declines.** All 26 counters match Rust on every one of Init's 54,475
-declarations. The 15 additional arena `either` cases in that snapshot also match the pinned Rust verdicts,
-with zero declines. See the [optimized performance report](docs/optimization-report.md),
+**All 198 scored arena cases have the correct verdict: 127 accepts and 71 rejects.
+The 17 open-outcome cases also match pinned nanoclo, with zero declines.**
+All 26 counters match Rust on every one of Init's 54,475 declarations.
+See the [historical optimization report](docs/optimization-report.md),
 [implementation evidence](PROGRESS.md) and [the plan](PLAN.md).
 
 Build and test with gfortran 13 or newer and GNU Make 4.3 or newer:
@@ -59,7 +59,7 @@ Translations carry source notices; the Apache-2.0 license and attribution
 are in [LICENSE](LICENSE) and [NOTICE](NOTICE).
 
 [Submission readiness](docs/submission.md) records the portable checker definition,
-clean-build validation and remaining publication/arena CI steps. The
+clean-build validation and upstream CI status. The
 [original baseline](docs/measurements.md) preserves the initial three-way and AoS measurements.
 
 A pinned snapshot of the current small arena corpus is bundled for regression CI

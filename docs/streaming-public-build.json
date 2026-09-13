@@ -1,0 +1,38 @@
+{
+  "release_revision": "b3a13ef5f0ae98a56087bef11ee1ec80dde0ef30",
+  "arena_revision": "62c45f880410e3a320be72b80be32beb2a6d4e19",
+  "anonymous_clone_and_arena_build": true,
+  "git_config_global": "/dev/null",
+  "git_config_nosystem": true,
+  "production_source_hashes_match_measured_build": true,
+  "binary_sha256": "42f9906aadc6c035d2044e9006e41614ce95175081e01d29c9681320ffb1d76a",
+  "checker_schema_valid": true,
+  "wrapper_checks": [
+    {
+      "input": "/home/kim/nanoclo-fortran/_tmp/submission-current-small/good/tutorial/001_basicDef.ndjson",
+      "expected": 0,
+      "status": 0,
+      "stderr": ""
+    },
+    {
+      "input": "/home/kim/nanoclo-fortran/_tmp/submission-current-small/bad/bogus1.ndjson",
+      "expected": 1,
+      "status": 1,
+      "stderr": "thm: declaration value has wrong type\n"
+    },
+    {
+      "input": "/home/kim/nanoclo-fortran/_tmp/public-missing-input.ndjson",
+      "expected": 3,
+      "status": 3,
+      "stderr": "open: Cannot open file '/home/kim/nanoclo-fortran/_tmp/public-missing-input.ndjson': No such file or directory\n"
+    }
+  ],
+  "init_fidelity": {
+    "per_declaration_counters": 26,
+    "declarations": 54475,
+    "all_equal": true,
+    "input_sha256": "02a2260b17c8e5be2eb0463c7d3131c35889337b51817f56756faee1241b7b91",
+    "rust_binary_sha256": "4adc3d6bf834b958e8ea49cd76b09bdde3fcbdd3c7fda9947cdee22eeea0dad2",
+    "port_binary_sha256": "42f9906aadc6c035d2044e9006e41614ce95175081e01d29c9681320ffb1d76a"
+  }
+}
