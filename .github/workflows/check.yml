@@ -1,5 +1,9 @@
 name: Check
-on: [push, pull_request]
+on:
+  push:
+    paths-ignore: ['docs/**', 'arena/**', '**/*.md']
+  pull_request:
+    paths-ignore: ['docs/**', 'arena/**', '**/*.md']
 permissions:
   contents: read
 jobs:

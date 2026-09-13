@@ -10,6 +10,7 @@ import hashlib
 import gzip
 import json
 import os
+import resource
 from pathlib import Path
 import subprocess
 
@@ -25,6 +26,9 @@ p.add_argument("--all-declaration-counters", action="store_true",
                help="use a Rust baseline produced by scripts/instrument_nanoclo.py")
 p.add_argument("--timeout", type=int, default=60)
 args = p.parse_args()
+# Match the arena stack setup for deep recursive conversion fixtures.
+_, stack_hard = resource.getrlimit(resource.RLIMIT_STACK)
+resource.setrlimit(resource.RLIMIT_STACK, (stack_hard, stack_hard))
 env = {**os.environ, "NANOCLO_CTRS": "1", "NANOCLO_DECLCTRS": "1"}
 if args.all_declaration_counters:
     env["NANOCLO_DECLCTRS_ALL"] = "1"
