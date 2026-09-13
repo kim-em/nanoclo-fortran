@@ -2,3 +2,7 @@
 _tmp/
 *.o
 *.eir
+/build/
+*.mod
+__pycache__/
+*.pyc

@@ -1,0 +1,146 @@
+[
+  {
+    "test": "cedar",
+    "sha256": "f8d47c6fbda4515cdd168eea29a2d9f49433f421e15d8c58133462d626508539",
+    "bytes": 829313081,
+    "arena_revision": "08affb0326c16bad8d0933a0a2332d52b420ba4a",
+    "exporter_revision": "411dce7db58a3afc60ecab2d211acd1042b593dc",
+    "config": {
+      "description": "Lean formalization of, and proofs about, [Cedar](https://www.cedarpolicy.com/).\n\nAuto-generated documentation is available at https://cedar-policy.github.io/cedar-spec/docs/.\n\nThis test case exports the whole `Cedar` module and as such contains even unused parts `Init` and\n`Batteries.`\n",
+      "url": "https://github.com/cedar-policy/cedar-spec/",
+      "ref": "main",
+      "rev": "f36af0f9fc038b9e6a340960fc24f3b610a84aee",
+      "pre-build": "shopt -s dotglob && find . -mindepth 1 -maxdepth 1 ! -name cedar-lean -exec rm -rf {} + && mv cedar-lean/* . && rmdir cedar-lean\n",
+      "module": "Cedar",
+      "outcome": "accept",
+      "compare-perf": true,
+      "skip-on-ci": true
+    },
+    "toolchain": "leanprover/lean4:v4.29.1"
+  },
+  {
+    "test": "con-leche",
+    "sha256": "bf47023cfd2986e67e77095eb7209c58a37ac4e7db649fd7ce5b38da73feb316",
+    "bytes": 567612971,
+    "arena_revision": "08affb0326c16bad8d0933a0a2332d52b420ba4a",
+    "exporter_revision": "411dce7db58a3afc60ecab2d211acd1042b593dc",
+    "config": {
+      "description": "The [con-leche](https://github.com/leanprover/con-leche) development's\nthree theorems: the consistency proof of its verified checker \u2014\n`model_exists`, every environment the checker accepts has a\nset-theoretic model, and its corollary `no_proof_of_False`, no proof of\n`False` is accepted \u2014 and the equivalence of its byte-level parser with\na naive reference (`scanLineSpec_eq_scanLineFwd`), each with its\ndependency cone.\n",
+      "url": "https://github.com/leanprover/con-leche",
+      "ref": "master",
+      "rev": "3e004805f2b919fd9d636901f80bf1ed87666099",
+      "module": "ConLecheTests",
+      "export-decls": [
+        "ConLeche.model_exists",
+        "ConLeche.no_proof_of_False",
+        "ConLeche.Frontend.scanLineSpec_eq_scanLineFwd"
+      ],
+      "outcome": "accept",
+      "compare-perf": true,
+      "skip-on-ci": true
+    },
+    "toolchain": "leanprover/lean4:v4.33.0"
+  },
+  {
+    "test": "cslib",
+    "sha256": "c636b50ee32aed97fa728f3576cbff5663f1f7807c560663b6d7c3722045c58f",
+    "bytes": 2145661820,
+    "arena_revision": "08affb0326c16bad8d0933a0a2332d52b420ba4a",
+    "exporter_revision": "411dce7db58a3afc60ecab2d211acd1042b593dc",
+    "config": {
+      "description": "The Lean Computer Science Library (CSLib). \n",
+      "url": "https://github.com/leanprover/cslib",
+      "ref": "main",
+      "rev": "c7944a9fb44c3298f1a960a5e574ab23a6ab8ed5",
+      "pre-build": "lake exe cache get",
+      "module": "Cslib",
+      "outcome": "accept",
+      "compare-perf": true,
+      "skip-on-ci": true
+    },
+    "toolchain": "leanprover/lean4:v4.30.0"
+  },
+  {
+    "test": "init",
+    "sha256": "02a2260b17c8e5be2eb0463c7d3131c35889337b51817f56756faee1241b7b91",
+    "bytes": 324561407,
+    "arena_revision": "08affb0326c16bad8d0933a0a2332d52b420ba4a",
+    "exporter_revision": "411dce7db58a3afc60ecab2d211acd1042b593dc",
+    "config": {
+      "description": "The `Init` module export from Lean 4 core.\n\nThis test contains the fundamental building blocks of Lean 4, including:\n\n- Basic data types (Nat, List, Array, String, etc.)\n- Core tactics and syntax\n- Foundational mathematical structures\n- Essential metaprogramming infrastructure\n\nThis is one of the smallest meaningful test cases, making it ideal for \ninitial checker validation and debugging.\n",
+      "leanfile": "tests/init_module.lean",
+      "outcome": "accept",
+      "compare-perf": true,
+      "skip-on-ci": true
+    },
+    "toolchain": "leanprover/lean4:v4.29.1"
+  },
+  {
+    "test": "mathlib",
+    "sha256": "ca2ec20fd063b61e71867b2975c81bd989af9f879b4886b8f08cd23c767a47bb",
+    "bytes": 5636308621,
+    "arena_revision": "08affb0326c16bad8d0933a0a2332d52b420ba4a",
+    "exporter_revision": "411dce7db58a3afc60ecab2d211acd1042b593dc",
+    "config": {
+      "description": "The complete [Mathlib](https://github.com/leanprover-community/mathlib4) library export.\n\nThis test contains all the mathematical definitions, theorems, and proofs\nfrom Mathlib, representing the largest and most comprehensive test case\nin the Lean kernel arena.\n",
+      "url": "https://github.com/leanprover-community/mathlib4",
+      "ref": "v4.29.1",
+      "rev": "5e932f97dd25535344f80f9dd8da3aab83df0fe6",
+      "pre-build": "lake exe cache get",
+      "module": "Mathlib",
+      "outcome": "accept",
+      "compare-perf": true,
+      "skip-on-ci": true
+    },
+    "toolchain": "leanprover/lean4:v4.29.1"
+  },
+  {
+    "test": "perf/magma-string-n4",
+    "sha256": "e6f1f83c80c670c5bbd7b532e228e8624941e7d6de4b9bb25f71bdc9282f07dd",
+    "bytes": 17248623,
+    "arena_revision": "08affb0326c16bad8d0933a0a2332d52b420ba4a",
+    "exporter_revision": "411dce7db58a3afc60ecab2d211acd1042b593dc",
+    "config": {
+      "description": "Countermodel certificate for an equational-theories implication, closed by\n`decide`. A magma on `Fin 4` with the operation table encoded as a `String`\nsatisfies `x \u25c7 x = y \u25c7 ((x \u25c7 (y \u25c7 z)) \u25c7 z)` but not\n`x \u25c7 x = x \u25c7 (((y \u25c7 x) \u25c7 y) \u25c7 z)`. The smallest magma of the family (4^3\ntuples); the cost is dominated by decoding each table entry out of the\nstring on every lookup.\n\nFrom a corpus of certificates generated for the SAIR math distillation\nchallenge (equational theories track). The small end of the string-table\nfamily; `magma-string-pair-n9` is the same workload at a larger scale.\n",
+      "leanfile": "tests/perf/magma-string-n4.lean",
+      "outcome": "accept",
+      "compare-perf": true,
+      "export-decls": [
+        "countermodel"
+      ]
+    },
+    "toolchain": "leanprover/lean4:v4.29.1"
+  },
+  {
+    "test": "perf/magma-string-pair-n9",
+    "sha256": "b10875abef30d9b71126537270f481fd855149a563ff35d6d5b047d6d5072cd7",
+    "bytes": 17250845,
+    "arena_revision": "08affb0326c16bad8d0933a0a2332d52b420ba4a",
+    "exporter_revision": "411dce7db58a3afc60ecab2d211acd1042b593dc",
+    "config": {
+      "description": "Countermodel certificate for an equational-theories implication, closed by\n`decide`. A magma on `Fin 9` with the operation table encoded as a `String`\nsatisfies `x \u25c7 y = (((z \u25c7 w) \u25c7 y) \u25c7 x) \u25c7 y` but not\n`x \u25c7 y = ((z \u25c7 (z \u25c7 y)) \u25c7 x) \u25c7 y`. Checking the certificate evaluates the\ndecidable instance over all 9^4 \u2248 6.5k four-tuples, decoding each table\nentry out of the string on every lookup. The heaviest of the string-table\ntests.\n\nFrom a corpus of certificates generated for the SAIR math distillation\nchallenge (equational theories track). `magma-string-n4` is the same\nworkload at a smaller scale.\n",
+      "leanfile": "tests/perf/magma-string-pair-n9.lean",
+      "outcome": "accept",
+      "compare-perf": true,
+      "export-decls": [
+        "countermodel"
+      ]
+    },
+    "toolchain": "leanprover/lean4:v4.29.1"
+  },
+  {
+    "test": "std",
+    "sha256": "0f7993829d6fcc8b07d177a3879024fbbc8908f7c6fd9cb2fa93370e4397e204",
+    "bytes": 551674936,
+    "arena_revision": "08affb0326c16bad8d0933a0a2332d52b420ba4a",
+    "exporter_revision": "411dce7db58a3afc60ecab2d211acd1042b593dc",
+    "config": {
+      "description": "The complete `Std` library export from Lean 4.\n\nThis test contains the standard library extensions beyond core Lean 4,\nincluding:\n\n- Enhanced data structures (HashMap, RBTree, etc.)\n- Additional mathematical operations\n- Extended list and array operations\n- Utility functions and theorems\n\nThis represents a medium-sized test case, larger than core modules\nbut smaller than Mathlib, making it useful for performance testing.\n",
+      "leanfile": "tests/std_module.lean",
+      "outcome": "accept",
+      "compare-perf": true,
+      "skip-on-ci": true
+    },
+    "toolchain": "leanprover/lean4:v4.29.1"
+  }
+]

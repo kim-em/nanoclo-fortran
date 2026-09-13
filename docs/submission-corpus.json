@@ -1,0 +1,1730 @@
+{
+  "arena_revision": "ac1c13762de41b594fa24b90ede8cfd97ac6a765",
+  "published_metadata_timestamp": "2026-09-13 00:41:39 UTC",
+  "current_scored_cases": 198,
+  "current_either_cases": 17,
+  "small_snapshot_cases": 207,
+  "large_cases": 8,
+  "records": [
+    {
+      "file": "bad/bogus1.ndjson",
+      "test": "bogus1",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "83801e7b8b2f2f24f40aa1dc7d0b0162c931e2aaec3b226acb170e3884cad307",
+      "bytes": 11641
+    },
+    {
+      "file": "bad/constlevels.ndjson",
+      "test": "constlevels",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "2fa6a967f15f76cfdcea3ef1992ff31a4cc4aa647b0f8fabf0ff61eedb3afbf1",
+      "bytes": 15670
+    },
+    {
+      "file": "bad/ctor-num-fields.ndjson",
+      "test": "ctor-num-fields",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "8a6aa0949892f59986fde474bfdc2a1887416b370e1148cd27e608a40f2eb94b",
+      "bytes": 34913
+    },
+    {
+      "file": "bad/extra-rec.ndjson",
+      "test": "extra-rec",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "eab650028a71177bd4d9fcb6a84b4e92dd91cf4e7af67023af458d18729be0e2",
+      "bytes": 1402
+    },
+    {
+      "file": "bad/k-rec-conv.ndjson",
+      "test": "k-rec-conv",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "32570fea94f7a2655de489427200c35f2e1ffa7ec9d46b82c531195eaacd5ef3",
+      "bytes": 13314
+    },
+    {
+      "file": "bad/large-elim-param.ndjson",
+      "test": "large-elim-param",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "df7d23ff199c4956620f3b1b4d17976c6bbe99ec6c1b5a4e803a7f9f415e331f",
+      "bytes": 6351
+    },
+    {
+      "file": "bad/large-elim-prop-bool.ndjson",
+      "test": "large-elim-prop-bool",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "2ba29719a2a300ff80e72920b66355785764ac53500719eec7bf459d174262cf",
+      "bytes": 23126
+    },
+    {
+      "file": "bad/level-imax-leq.ndjson",
+      "test": "level-imax-leq",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "497eaa80a214386c679356c33a72c8beab5019c4938494b1608e3772a2756191",
+      "bytes": 5708
+    },
+    {
+      "file": "bad/level-imax-normalization.ndjson",
+      "test": "level-imax-normalization",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "d368d5569321b717b7ec95bd1f4fa5bbd7d6e1f8d6ebdf1a0644dc8bc76bc2ec",
+      "bytes": 5897
+    },
+    {
+      "file": "bad/nat-rec-k-lie.ndjson",
+      "test": "nat-rec-k-lie",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "5a49d132bb0c7dca091baa481333f5e97e390fde72c8ec18c6124a690ec47d7c",
+      "bytes": 6413
+    },
+    {
+      "file": "bad/nat-rec-rules.ndjson",
+      "test": "nat-rec-rules",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "934e59fdc4f2a978605c4a44e90b94b57e9940f3828620c0db337b7125cdd169",
+      "bytes": 8345
+    },
+    {
+      "file": "bad/nested-unused-param.ndjson",
+      "test": "nested-unused-param",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "0510cceb7cc66b39792a4d1589cbcee499b1ba56837203030a3324fb6355a618",
+      "bytes": 60643
+    },
+    {
+      "file": "bad/orphan-ctor.ndjson",
+      "test": "orphan-ctor",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "2c9b12979ea3da11272d6eca4b0a39523a863d6fb501daf61c4edb8996a97daa",
+      "bytes": 1400
+    },
+    {
+      "file": "bad/orphan-rec.ndjson",
+      "test": "orphan-rec",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "738f28bc1175d70faf09f4b45ae7ca92e8b8d397f6c5d0183240cd695f6d7bc4",
+      "bytes": 1401
+    },
+    {
+      "file": "bad/perf/refute-cheap-first.ndjson",
+      "test": "perf/refute-cheap-first",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "a1f15a2ccfc57c1475e5a3d98034017f9297d355a8452ebe3ef3cfb4b293ad36",
+      "bytes": 21171
+    },
+    {
+      "file": "bad/perf/refute-cheap-last.ndjson",
+      "test": "perf/refute-cheap-last",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "c0bd59565940fc41816942f6d32a9612af85290a41f8595ba900ac916b4ea9eb",
+      "bytes": 20975
+    },
+    {
+      "file": "bad/proj-non-structure.ndjson",
+      "test": "proj-non-structure",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "d67fc8c67eb839ec41b5caa7744ba38c0866872a1e5a3e3cad55700e403340cf",
+      "bytes": 5071
+    },
+    {
+      "file": "bad/proj-of-imax-prop.ndjson",
+      "test": "proj-of-imax-prop",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "964f1ed8642fbb87eea5f9ce1b17c2fbf9489be344d33ca479a9bc4ec4a770c9",
+      "bytes": 19772
+    },
+    {
+      "file": "bad/proj-of-prop.ndjson",
+      "test": "proj-of-prop",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "7ec1cb24885cae045ccb842f1fc786869ed708a19fa289f92b410297a299f5d5",
+      "bytes": 3967
+    },
+    {
+      "file": "bad/proj-of-stuck-prop.ndjson",
+      "test": "proj-of-stuck-prop",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "a2fc30b56ba4b26e7e5fccc53c6b63a73e083761b3b7f4caa4d462fde84ee711",
+      "bytes": 282521
+    },
+    {
+      "file": "bad/proj-of-subst-prop.ndjson",
+      "test": "proj-of-subst-prop",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "1c9d8a266c198b7d4a1cfbe3fffd2de2d2b75e603fb3cedfa5d5309f7b295b9d",
+      "bytes": 261708
+    },
+    {
+      "file": "bad/rec-k-lie.ndjson",
+      "test": "rec-k-lie",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "baf41fbd040f172ad06afa78f9994b4501ebcd91e46c4a13e79227ccd246a188",
+      "bytes": 5434
+    },
+    {
+      "file": "bad/rec-missing-ih.ndjson",
+      "test": "rec-missing-ih",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "8a240552317ba17d44d175c10531e5f988f55569db5eff734701735ce598fa73",
+      "bytes": 296514
+    },
+    {
+      "file": "bad/rec-of-subst-prop.ndjson",
+      "test": "rec-of-subst-prop",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "fa498cf880a5390e65c3990e8361829a5012de4fae133dbfcd6a81af26f74ca8",
+      "bytes": 276794
+    },
+    {
+      "file": "bad/tutorial/002_badDef.ndjson",
+      "test": "tutorial/002_badDef",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "d1342aceb5741fc040523d3b4bd5e1ae3160dc17213d1dc0f6d766559a93a227",
+      "bytes": 365
+    },
+    {
+      "file": "bad/tutorial/009_forallSortBad.ndjson",
+      "test": "tutorial/009_forallSortBad",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "36eef2fa43e86af2d031a9cb9ec8fbd452dd7e50d3444997fe71003cc7295051",
+      "bytes": 1273
+    },
+    {
+      "file": "bad/tutorial/010_nonTypeType.ndjson",
+      "test": "tutorial/010_nonTypeType",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "18cba14f24723f0325721cdd1a5699e45b61bcce7ed94f2bded0f42c848ba4c4",
+      "bytes": 1094
+    },
+    {
+      "file": "bad/tutorial/011_nonTypeAxiom.ndjson",
+      "test": "tutorial/011_nonTypeAxiom",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "687a8966b2727b26143b3340e8bead862b9057e5b4ec1ee7fc51a2a6e7211dc6",
+      "bytes": 1043
+    },
+    {
+      "file": "bad/tutorial/012_nonPropThm.ndjson",
+      "test": "tutorial/012_nonPropThm",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "07c030b1e9ee321bb537f4f82f5238087cbed199f5e4f8673650c3190e54a33a",
+      "bytes": 424
+    },
+    {
+      "file": "bad/tutorial/014_selfProof.ndjson",
+      "test": "tutorial/014_selfProof",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "f39b1bba5099649997a6c7cd49c870f91dfc86432979eafae58692d236142499",
+      "bytes": 459
+    },
+    {
+      "file": "bad/tutorial/019_tut06_bad01.ndjson",
+      "test": "tutorial/019_tut06_bad01",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "9c5c0329065ef0b470c7b43a365c30a0098697dbeb8d69f2c2bea2e345ab9533",
+      "bytes": 427
+    },
+    {
+      "file": "bad/tutorial/046_inductBadNonSort.ndjson",
+      "test": "tutorial/046_inductBadNonSort",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "372f6a167433b45749fa38f14ad3a2e8ca4e0dae8762812c0b9f288e9f68499f",
+      "bytes": 1182
+    },
+    {
+      "file": "bad/tutorial/047_inductBadNonSort2.ndjson",
+      "test": "tutorial/047_inductBadNonSort2",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "95836e7bee5fbd00d1d16d88cea2defa8dfb2387fc0e400d200b59715716a0d9",
+      "bytes": 598
+    },
+    {
+      "file": "bad/tutorial/048_inductLevelParam.ndjson",
+      "test": "tutorial/048_inductLevelParam",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "732e2fc946ab308a819366bc5395865a69235098e1a401ec1a059d05d89ef06e",
+      "bytes": 515
+    },
+    {
+      "file": "bad/tutorial/049_inductTooFewParams.ndjson",
+      "test": "tutorial/049_inductTooFewParams",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "5d54c2cc017f35b26744f8b5ca4438bdddd8f254f3023948a542b70e5da72827",
+      "bytes": 548
+    },
+    {
+      "file": "bad/tutorial/050_inductWrongCtorParams.ndjson",
+      "test": "tutorial/050_inductWrongCtorParams",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "20214ec1a31221884548d3e91b689b9569fd7588af2fb0e219754b683041ac10",
+      "bytes": 1182
+    },
+    {
+      "file": "bad/tutorial/051_inductWrongCtorResParams.ndjson",
+      "test": "tutorial/051_inductWrongCtorResParams",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "5506566449cc2f3c83f417007bf15a7a0101c458c450d77a23cfd4c2423910c4",
+      "bytes": 1293
+    },
+    {
+      "file": "bad/tutorial/052_inductWrongCtorResLevel.ndjson",
+      "test": "tutorial/052_inductWrongCtorResLevel",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "3f29bd3a753caa056cc45c20cd8aeb734bc44cfc6b3828a6c6ec855737f596f3",
+      "bytes": 1411
+    },
+    {
+      "file": "bad/tutorial/053_inductInIndex.ndjson",
+      "test": "tutorial/053_inductInIndex",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "8dc9a9997862a5f25b76520f5d69a146664ad9f0364dd350732a7f76e4190763",
+      "bytes": 1099
+    },
+    {
+      "file": "bad/tutorial/054_indNeg.ndjson",
+      "test": "tutorial/054_indNeg",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "89592d2e05e7ea518cf550eb18b99d1172b63b96b90abf1454b7102300eda843",
+      "bytes": 996
+    },
+    {
+      "file": "bad/tutorial/056_reduceCtorType.mk.ndjson",
+      "test": "tutorial/056_reduceCtorType.mk",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "bd087620c8685a48789b4bf46c373f4c81475b6d1c3b6081cf16d83a4a216a26",
+      "bytes": 1549
+    },
+    {
+      "file": "bad/tutorial/057_indNegReducible.ndjson",
+      "test": "tutorial/057_indNegReducible",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "c573634d126fe5c386474f89e2993cc97888af3ce0efcab176887751ea36643f",
+      "bytes": 1918
+    },
+    {
+      "file": "bad/tutorial/061_typeWithTooHighTypeField.mk.ndjson",
+      "test": "tutorial/061_typeWithTooHighTypeField.mk",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "d2ab0a56844b0739dd5b75d35894eca8766a7c41b8097873ba018d341622c70d",
+      "bytes": 943
+    },
+    {
+      "file": "bad/tutorial/073_BogusRecursor.ndjson",
+      "test": "tutorial/073_BogusRecursor",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "7f166e26d8b79ca496b066644bbe199faefa4c5fb3c6ded01e35ff4ec628a309",
+      "bytes": 1865
+    },
+    {
+      "file": "bad/tutorial/087_projOutOfRange.ndjson",
+      "test": "tutorial/087_projOutOfRange",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "5db4d2e7e00fe46443daade14664b6227b8e55e8dca58791d7d551242caf5b86",
+      "bytes": 3875
+    },
+    {
+      "file": "bad/tutorial/088_projNotStruct.ndjson",
+      "test": "tutorial/088_projNotStruct",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "2ddb5f53a6f8b459b7dd6c2daa9bb794613295dccec07999573b2c99cc9cb076",
+      "bytes": 3557
+    },
+    {
+      "file": "bad/tutorial/090_projProp2.ndjson",
+      "test": "tutorial/090_projProp2",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "44b31dd5644566e41670210e8584792b2819f9b64bb8d356948cdee674e82906",
+      "bytes": 8390
+    },
+    {
+      "file": "bad/tutorial/092_projProp4.ndjson",
+      "test": "tutorial/092_projProp4",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "1dbc013754ba41dae8c0449252708027e7f59fd8523d0896f2c8aae65d942b29",
+      "bytes": 8390
+    },
+    {
+      "file": "bad/tutorial/093_projProp5.ndjson",
+      "test": "tutorial/093_projProp5",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "9ca0433a35a24516035c5be845c2f0c0fbc78231b1e2625797ee01da9271b2d0",
+      "bytes": 8596
+    },
+    {
+      "file": "bad/tutorial/094_projProp6.ndjson",
+      "test": "tutorial/094_projProp6",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "38567094775dea24a0742cc4fceec671ef17a3825574326d1290bafa02166f84",
+      "bytes": 8390
+    },
+    {
+      "file": "bad/tutorial/096_projIndexData.ndjson",
+      "test": "tutorial/096_projIndexData",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "96d23422f47630509730fc9fee4c87a79bd300d3edb15626e68c1604f7e6798e",
+      "bytes": 6995
+    },
+    {
+      "file": "bad/tutorial/097_projIndexData2.ndjson",
+      "test": "tutorial/097_projIndexData2",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "0536b5c0a55c24e69dbcd5734c31404de3e5d28c8469a72e2d593694fb10ffcf",
+      "bytes": 6997
+    },
+    {
+      "file": "bad/tutorial/100_ruleKbad.ndjson",
+      "test": "tutorial/100_ruleKbad",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "cf80eb3fa8d1cffc0a17c46730b20166688ea8346e299b19e3036cfc6462c4cf",
+      "bytes": 6628
+    },
+    {
+      "file": "bad/tutorial/101_ruleKAcc.ndjson",
+      "test": "tutorial/101_ruleKAcc",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "0a053ed771c6f0c171d231137f8000efe5f48f8d5d30cfd9863fe44e55a1d4d2",
+      "bytes": 13122
+    },
+    {
+      "file": "bad/tutorial/105_proofIrrelevanceBad.ndjson",
+      "test": "tutorial/105_proofIrrelevanceBad",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "9423911316ad18c0ec158f1f004f9e79c3a0f9580bb6a1a0f798cf04066e5a27",
+      "bytes": 4851
+    },
+    {
+      "file": "bad/tutorial/110_indexedUnitEta.ndjson",
+      "test": "tutorial/110_indexedUnitEta",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "f1b07164d2f71bbeb2de6af4e9163c4b1bcceb4751e89b4b0dc2e0faa40c5d1d",
+      "bytes": 7372
+    },
+    {
+      "file": "bad/tutorial/112_indexedStructEta.ndjson",
+      "test": "tutorial/112_indexedStructEta",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "0962411896c8365fc85581c7e64f3f4ece34399be025be408b43003d71a0400d",
+      "bytes": 8713
+    },
+    {
+      "file": "bad/tutorial/115_funEtaBad.ndjson",
+      "test": "tutorial/115_funEtaBad",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "55235f26d78f88177dcfd394ea5fcba4ff213cb5b1a515b8eb3fbba2c87bacce",
+      "bytes": 4979
+    },
+    {
+      "file": "bad/tutorial/116_reflOccLeft.ndjson",
+      "test": "tutorial/116_reflOccLeft",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "d26c150c31cc883d135ab9de30f06ad8ff3e1f7f6cba86035585eacd829afefc",
+      "bytes": 3826
+    },
+    {
+      "file": "bad/tutorial/117_reflOccInIndex.ndjson",
+      "test": "tutorial/117_reflOccInIndex",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "4bb99bd31dd9c65f772e5e0e10124f8c1e4c228d103b1c03f1dd04b2767c4ff5",
+      "bytes": 4044
+    },
+    {
+      "file": "bad/tutorial/124_accRecNoEta.ndjson",
+      "test": "tutorial/124_accRecNoEta",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "29935bfbbb964aaaaf8fc4b0e88544dfdd1cac36418570d0e20f963b11e2d09e",
+      "bytes": 13351
+    },
+    {
+      "file": "bad/tutorial/131_dup_defs.ndjson",
+      "test": "tutorial/131_dup_defs",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "0d69ddde24113c345588219b0053ca8a0370e18ba18872ce59803f4895463a03",
+      "bytes": 475
+    },
+    {
+      "file": "bad/tutorial/132_dup_ind_def.ndjson",
+      "test": "tutorial/132_dup_ind_def",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "24ef675eb2b35eafac11730c3c0b76b349e6104966490909da70e6673f07a8d6",
+      "bytes": 1712
+    },
+    {
+      "file": "bad/tutorial/133_dup_ctor_def.ndjson",
+      "test": "tutorial/133_dup_ctor_def",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "dff7c8164ca15c5cd7cf784219a7b281cf0405db9f23f362bbeee9b0f14560d3",
+      "bytes": 1713
+    },
+    {
+      "file": "bad/tutorial/134_dup_rec_def.ndjson",
+      "test": "tutorial/134_dup_rec_def",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "880f65f624c66018509b6153a165d08c252bda2033242a81f76f346dcee835d2",
+      "bytes": 1712
+    },
+    {
+      "file": "bad/tutorial/135_misnamed_rec_user.ndjson",
+      "test": "tutorial/135_misnamed_rec_user",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "c8c5e111f5b41c34237cafb1ead3d43fae8e51d72d4a62eb61a8c0e71a09a048",
+      "bytes": 2020
+    },
+    {
+      "file": "bad/tutorial/136_dup_rec_def2.ndjson",
+      "test": "tutorial/136_dup_rec_def2",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "d45f500e2a803ec48ea904f9b82e8eee77e2abaca64b2ddd06d29c39bb481033",
+      "bytes": 1757
+    },
+    {
+      "file": "bad/tutorial/137_dup_ctor_rec.ndjson",
+      "test": "tutorial/137_dup_ctor_rec",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "5709aea1eabc2b3ba1a78b091966b018dcae2aa1c439ed0f1832d142cdd630df",
+      "bytes": 1548
+    },
+    {
+      "file": "bad/tutorial/138_DupConCon.ndjson",
+      "test": "tutorial/138_DupConCon",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "e847fd8d2d6062ef6fa2d84ebe10474174689d9f074c2ac2b208ad08ddebadcb",
+      "bytes": 2255
+    },
+    {
+      "file": "bad/tutorial/139_falseFromUnsafe.ndjson",
+      "test": "tutorial/139_falseFromUnsafe",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "ef646a5368b95ad4021069a0c9906a6b5e11c0abcfd22673821e6bd20f26e0a8",
+      "bytes": 1367
+    },
+    {
+      "file": "bad/tutorial/140_falseFromPartial.ndjson",
+      "test": "tutorial/140_falseFromPartial",
+      "outcome": "reject",
+      "pinned_nanoclo_status": 1,
+      "sha256": "cd249a6f8e59fa74e15b325996a9c786a17936993dfddb6e5bc2335914af31fd",
+      "bytes": 1370
+    },
+    {
+      "file": "good/corner-cases/proof-param-ok.ndjson",
+      "test": "corner-cases/proof-param-ok",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "7f9b3c07a64b441f8dd0f7dd2912274241fdb17118953fb089f796fdd1590af4",
+      "bytes": 2961
+    },
+    {
+      "file": "good/init-prelude.ndjson",
+      "test": "init-prelude",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "fc440bd35aa4ecb244836eef0c2e31c578ac4460f42665f4e8305cbc2cd2104d",
+      "bytes": 3714854
+    },
+    {
+      "file": "good/level-index-out-of-order.ndjson",
+      "test": "level-index-out-of-order",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "7db8148079e2e8160a1a4c71258ad11b17ce18edfa84ab1e12eae937ec9538d1",
+      "bytes": 328
+    },
+    {
+      "file": "good/perf/app-lam.ndjson",
+      "test": "perf/app-lam",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "3f7b7a595dc29b0e289c9031c4edaef42d0e12b8aee3cbb48cf15cb715adc09a",
+      "bytes": 1276513
+    },
+    {
+      "file": "good/perf/args-before-unfold.ndjson",
+      "test": "perf/args-before-unfold",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "11844c0ce9aa3ac50be0ae85c0138b1efeb909b913108b532573433254e89b0d",
+      "bytes": 45602
+    },
+    {
+      "file": "good/perf/beta-ladder.ndjson",
+      "test": "perf/beta-ladder",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "0b17ce0ad997f3443a7549d5c2fe062bc6d592ad89ecc00ecedd5a91834f15a1",
+      "bytes": 461026
+    },
+    {
+      "file": "good/perf/church-numerals.ndjson",
+      "test": "perf/church-numerals",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "1234703fc7082cdf99eaf7ecd18fe09f1e11191c9c5b4ffcc5c159c50595927a",
+      "bytes": 9849
+    },
+    {
+      "file": "good/perf/discarded-argument-match.ndjson",
+      "test": "perf/discarded-argument-match",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "b57411e156c572e2b0e4bd25033fb0f689198d684715600ac7f855cccca1edca",
+      "bytes": 29304
+    },
+    {
+      "file": "good/perf/discarded-argument.ndjson",
+      "test": "perf/discarded-argument",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "8d3448f9d00a00f40b34b11ec17d5abe230f76c2578c37fd735dfaf914707bd2",
+      "bytes": 16245
+    },
+    {
+      "file": "good/perf/folded-constant-first.ndjson",
+      "test": "perf/folded-constant-first",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "22cd194a4e1142b0790776f01292108301b078d9e6b7a20a6a9227e55b61715c",
+      "bytes": 53202
+    },
+    {
+      "file": "good/perf/folded-constant-last.ndjson",
+      "test": "perf/folded-constant-last",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "2e7b6fc088f09ed018066a524894258498c7e57fbcde04852920c18838386854",
+      "bytes": 52211
+    },
+    {
+      "file": "good/perf/fueled-chain.ndjson",
+      "test": "perf/fueled-chain",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "b4bcef85caa20a9f80c390f2415fae9ddb28966c8da64a2e03fc6ec72c1d041d",
+      "bytes": 488145
+    },
+    {
+      "file": "good/perf/grind-ring-5.ndjson",
+      "test": "perf/grind-ring-5",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "f0fd36e8ad0f6e224c4be968a991d4f0643280230abe0275578e018aff0ac0f8",
+      "bytes": 10184724
+    },
+    {
+      "file": "good/perf/identical-nesting.ndjson",
+      "test": "perf/identical-nesting",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "38da6395264b5761687f5a3e7c2444b96eb59b095d7dc0ba368f39415ebf8b69",
+      "bytes": 8949
+    },
+    {
+      "file": "good/perf/irrelevance-before-evaluation.ndjson",
+      "test": "perf/irrelevance-before-evaluation",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "f79e283acead6adf345f3139e3c15d754867efe27ffafc1c8dedc7035b9ca04d",
+      "bytes": 17913
+    },
+    {
+      "file": "good/perf/let-ladder.ndjson",
+      "test": "perf/let-ladder",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "b7f15b7399cd86b2a7c8b5c0c72d395a7cfc37a949d7e49520fd354dc4842305",
+      "bytes": 468276
+    },
+    {
+      "file": "good/perf/magma-list-deep-n21.ndjson",
+      "test": "perf/magma-list-deep-n21",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "2283048c8f82883fd5a7a59a20601b58256568c82561dff3304f38ad4d57fc75",
+      "bytes": 1171189
+    },
+    {
+      "file": "good/perf/magma-list-deep-n36.ndjson",
+      "test": "perf/magma-list-deep-n36",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "8adb6a65960f41fd8fdc8447b70b942075448ecd5155c1c3ed0b7adb954da34f",
+      "bytes": 1226251
+    },
+    {
+      "file": "good/perf/magma-list-pair-n21.ndjson",
+      "test": "perf/magma-list-pair-n21",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "9536b3bb1529418dd3ff735dc3d288641c20cf6a71a01716647f62088e0ba0e2",
+      "bytes": 595800
+    },
+    {
+      "file": "good/perf/magma-list-pair-n7.ndjson",
+      "test": "perf/magma-list-pair-n7",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "c3894b9ba91947cd23c7e6263813868a31dc8092123bbc5962379732ef99e906",
+      "bytes": 596351
+    },
+    {
+      "file": "good/perf/repeated-subproblem.ndjson",
+      "test": "perf/repeated-subproblem",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "97ec5a16351fb60e171f67ff3ff292e4a166a59bc7af3772cc782f77ec26dfc8",
+      "bytes": 11659
+    },
+    {
+      "file": "good/perf/shared-subterm.ndjson",
+      "test": "perf/shared-subterm",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "2df9f9fbfb7167bb9e0d004ff25afd99fa434113fc343f130eb459661f40e29b",
+      "bytes": 51310
+    },
+    {
+      "file": "good/perf/shift-cascade.ndjson",
+      "test": "perf/shift-cascade",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "ece47e6c9082d05db8a3063bb164a0f64124f25760023b87803aea2d82911691",
+      "bytes": 262410
+    },
+    {
+      "file": "good/perf/unroll-versus-evaluate.ndjson",
+      "test": "perf/unroll-versus-evaluate",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "815d75fa70b6c06f4164e86ff77050b9679162f3be939c6757bd66f73f432203",
+      "bytes": 45645
+    },
+    {
+      "file": "good/proof-irrel.ndjson",
+      "test": "proof-irrel",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "962cfb1378bc2f73e327fd88e526a0b9b7108f4ad1a1df55766d7d1156ad8d76",
+      "bytes": 1777
+    },
+    {
+      "file": "good/sparse-name-index.ndjson",
+      "test": "sparse-name-index",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "3279c9c8ae24d5b3a8433ddee5d4a421c4e15e3cd84117fb4873d1284112b96d",
+      "bytes": 292
+    },
+    {
+      "file": "good/tutorial/001_basicDef.ndjson",
+      "test": "tutorial/001_basicDef",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "82023f63efe0d75e9966621bfc69033ccd1333e8d0d989b3d54a79859e9da0ce",
+      "bytes": 367
+    },
+    {
+      "file": "good/tutorial/003_arrowType.ndjson",
+      "test": "tutorial/003_arrowType",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "5c89ad23548a25281adaaaa705193f3d3846902f93e0a6740e3b95566706ae52",
+      "bytes": 622
+    },
+    {
+      "file": "good/tutorial/004_dependentType.ndjson",
+      "test": "tutorial/004_dependentType",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "9c1601d4a39c4393a31cb6372c6d78dc245db79e385e359a80573b5bbfb09f83",
+      "bytes": 460
+    },
+    {
+      "file": "good/tutorial/005_constType.ndjson",
+      "test": "tutorial/005_constType",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "b193eee0eb8419ffdf4287c220b346d6f7f90460d8e32bef631309551626d042",
+      "bytes": 897
+    },
+    {
+      "file": "good/tutorial/006_betaReduction.ndjson",
+      "test": "tutorial/006_betaReduction",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "3320f6f67cd55b2bae9112ea9b0d002f231e88ec4fb3c3f3c8fd4e750b13ce78",
+      "bytes": 1363
+    },
+    {
+      "file": "good/tutorial/007_betaReduction2.ndjson",
+      "test": "tutorial/007_betaReduction2",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "fb85e6eb84319dce9fed8acacb08cab2c5a54b67960112bc9de3eac22fc5a909",
+      "bytes": 1434
+    },
+    {
+      "file": "good/tutorial/008_forallSortWhnf.ndjson",
+      "test": "tutorial/008_forallSortWhnf",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "b4af42800421f4ac5ec7e699a706bdd82f9f1324a5d2d49769fb340bf36e6a48",
+      "bytes": 1201
+    },
+    {
+      "file": "good/tutorial/013_thmProof.ndjson",
+      "test": "tutorial/013_thmProof",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "5e4664a6d4f05afbeff4e0af19681e88b2817c48787a9a281c4ba95d80483333",
+      "bytes": 1345
+    },
+    {
+      "file": "good/tutorial/015_levelComp1.ndjson",
+      "test": "tutorial/015_levelComp1",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "2e6b6016ac241c9e1dd01ee86782f21adabd928bca24880b60619de453bec0c3",
+      "bytes": 391
+    },
+    {
+      "file": "good/tutorial/016_levelComp2.ndjson",
+      "test": "tutorial/016_levelComp2",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "aa971f4ba7603e183ebcf90a8ac92241f5fa2a96fbc6659e45380f52de3ffd6e",
+      "bytes": 409
+    },
+    {
+      "file": "good/tutorial/017_levelComp3.ndjson",
+      "test": "tutorial/017_levelComp3",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "e11ecbb09540778e2d2d0084d7759ce1c1483ca7f02168b87e1ec8bd1bf2c5cd",
+      "bytes": 427
+    },
+    {
+      "file": "good/tutorial/018_levelParams.ndjson",
+      "test": "tutorial/018_levelParams",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "d78d458ea81bb210c80d3915976a03536f1b267879207f3604745b777014a167",
+      "bytes": 1429
+    },
+    {
+      "file": "good/tutorial/020_levelComp4.ndjson",
+      "test": "tutorial/020_levelComp4",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "39dced2925dcce7f66539f47f408d276b48d57638b4bfefc47860eed2f710a58",
+      "bytes": 424
+    },
+    {
+      "file": "good/tutorial/021_levelComp5.ndjson",
+      "test": "tutorial/021_levelComp5",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "31910166228cf46f68dbaa876d1c155734475b0f3f7a15c2a82f5535e8c150f8",
+      "bytes": 424
+    },
+    {
+      "file": "good/tutorial/022_imax1.ndjson",
+      "test": "tutorial/022_imax1",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "8fe3d41b913c8717847bc4a544e6b947bb5a1b616d80dbe19859d465ff225d57",
+      "bytes": 809
+    },
+    {
+      "file": "good/tutorial/023_imax2.ndjson",
+      "test": "tutorial/023_imax2",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "9d7fdab95e9ac1f87e19055e3133b98173f90d94c641870dc49cff6db2d1061f",
+      "bytes": 828
+    },
+    {
+      "file": "good/tutorial/024_levelMaxComm.ndjson",
+      "test": "tutorial/024_levelMaxComm",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "8a2ed8095cf9f69fcebb1e8b695944599cd524b42334cd6ff3051a5deebe7134",
+      "bytes": 524
+    },
+    {
+      "file": "good/tutorial/025_levelMaxAssoc.ndjson",
+      "test": "tutorial/025_levelMaxAssoc",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "2e97e820cfffa0f890ea70f7c3ea7f7e1636568196f3fc738868249644f9f229",
+      "bytes": 623
+    },
+    {
+      "file": "good/tutorial/026_levelMaxIdem.ndjson",
+      "test": "tutorial/026_levelMaxIdem",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "1ee0d884c19ef76feb4ba77f5448507da2f8d983a688f4e8711d61784f50e571",
+      "bytes": 447
+    },
+    {
+      "file": "good/tutorial/027_levelMaxAbsorb.ndjson",
+      "test": "tutorial/027_levelMaxAbsorb",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "87fab97e0b524a64e21ebe2adbadb407b381d1bee45cd2060e4a24055d554b11",
+      "bytes": 526
+    },
+    {
+      "file": "good/tutorial/028_inferVar.ndjson",
+      "test": "tutorial/028_inferVar",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "2ed39c087f88481185d28085d7d2ba2f2985426da70062bfe4e6dd987af46110",
+      "bytes": 713
+    },
+    {
+      "file": "good/tutorial/029_defEqLambda.ndjson",
+      "test": "tutorial/029_defEqLambda",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "7a28d11e2a035c2d0d97c75d5cb0bb12e16be1c5502b9975aa08775e1928ba92",
+      "bytes": 1391
+    },
+    {
+      "file": "good/tutorial/030_peano1.ndjson",
+      "test": "tutorial/030_peano1",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "fe92f67341850f0c222c43cd99e9f17904cdb003654f394890f49df431ceaf7d",
+      "bytes": 3692
+    },
+    {
+      "file": "good/tutorial/031_peano2.ndjson",
+      "test": "tutorial/031_peano2",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "63c8aec3c8457d2f4e76476b1d503647fb58d998b0dc2176cacc5efd814586e0",
+      "bytes": 4566
+    },
+    {
+      "file": "good/tutorial/032_peano3.ndjson",
+      "test": "tutorial/032_peano3",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "e731f91828d3bb6186205233ba8ba94dd54bdf21e7b9a06e020f789be70ad55d",
+      "bytes": 5006
+    },
+    {
+      "file": "good/tutorial/033_letType.ndjson",
+      "test": "tutorial/033_letType",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "1222e60968ee37505bbb4952811a9645af2307f2a85e7f3d2d6fa2a7f1d5e667",
+      "bytes": 489
+    },
+    {
+      "file": "good/tutorial/034_letTypeDep.ndjson",
+      "test": "tutorial/034_letTypeDep",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "eca16eea9573a481f232edfd0ff84a02ae208c1f379d967a56aec75f86fc7ca1",
+      "bytes": 1238
+    },
+    {
+      "file": "good/tutorial/035_letRed.ndjson",
+      "test": "tutorial/035_letRed",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "b3d5e6f1f6e45721973e4e7167fbe0a92abbdcd69f039112eac70ab25c028acc",
+      "bytes": 627
+    },
+    {
+      "file": "good/tutorial/036_empty.ndjson",
+      "test": "tutorial/036_empty",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "030852937308e66cb90de3b8de7cd336f3d825e81c87c5be5cc1fe33c6d54356",
+      "bytes": 1228
+    },
+    {
+      "file": "good/tutorial/037_boolType.ndjson",
+      "test": "tutorial/037_boolType",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "02053d077abf5a63594d1025f9ef2f90dfff65f331503aa3b7486bbbb997b3e8",
+      "bytes": 2377
+    },
+    {
+      "file": "good/tutorial/038_twoBool.ndjson",
+      "test": "tutorial/038_twoBool",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "91a1f7379e22ebbec710ce6b43b7e0750be258ace8fc22d0b889fb76b57010de",
+      "bytes": 4266
+    },
+    {
+      "file": "good/tutorial/039_andType.ndjson",
+      "test": "tutorial/039_andType",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "d81009480e131d451da9e625fe9a90fff92fbee08d324aefd6fde3c3b89979e1",
+      "bytes": 3273
+    },
+    {
+      "file": "good/tutorial/040_prodType.ndjson",
+      "test": "tutorial/040_prodType",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "a74e83890dce34014ef7dc8f1f6e7baf56d481df2a776d886462c789c529741d",
+      "bytes": 3919
+    },
+    {
+      "file": "good/tutorial/041_pprodType.ndjson",
+      "test": "tutorial/041_pprodType",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "9f2f275784ba923bc3a050c5f1856ad0d18c83d31ff107a5cd663d4cceaec98a",
+      "bytes": 3906
+    },
+    {
+      "file": "good/tutorial/042_pUnitType.ndjson",
+      "test": "tutorial/042_pUnitType",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "acc7a70c97888e02e2b92e583b370803db0bdac1ddc38f9ff036831459d3a891",
+      "bytes": 1843
+    },
+    {
+      "file": "good/tutorial/043_eqType.ndjson",
+      "test": "tutorial/043_eqType",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "d45ed54cc74be3d7d92aae6bacc040420ba33f23fa034b4497edb389e089afdc",
+      "bytes": 3324
+    },
+    {
+      "file": "good/tutorial/044_natDef.ndjson",
+      "test": "tutorial/044_natDef",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "95d33f871f126e234740e05d9291a1cedcc6a2d01522aedc3122b25aab17ab95",
+      "bytes": 3392
+    },
+    {
+      "file": "good/tutorial/045_rbTreeDef.ndjson",
+      "test": "tutorial/045_rbTreeDef",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "d9781f44fcb7e46ff06da1c8a273a4fec4ae989e4114d6668720bd5b87c20b79",
+      "bytes": 16090
+    },
+    {
+      "file": "good/tutorial/055_reduceCtorParam.mk.ndjson",
+      "test": "tutorial/055_reduceCtorParam.mk",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "16d146c5ef39743b6a95f21043a43b890e22d72792fd9436e37396765124a7a2",
+      "bytes": 4179
+    },
+    {
+      "file": "good/tutorial/058_predWithTypeField.ndjson",
+      "test": "tutorial/058_predWithTypeField",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "5af1ed8df583ce1857bc0852679e04f6024b8de4f1eb2ceba91cc7ed5b6ecb6c",
+      "bytes": 2023
+    },
+    {
+      "file": "good/tutorial/059_typeWithTypeField.ndjson",
+      "test": "tutorial/059_typeWithTypeField",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "5c2c36c26f88438688db304bc33d039eb8ce78522e6d3fa53e54a2ae1b14426c",
+      "bytes": 2116
+    },
+    {
+      "file": "good/tutorial/060_typeWithTypeFieldPoly.ndjson",
+      "test": "tutorial/060_typeWithTypeFieldPoly",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "a1bb69e5739372ba607b2ed8766cda7373c71a4286788e87ccb07c0749c257be",
+      "bytes": 2190
+    },
+    {
+      "file": "good/tutorial/062_emptyRec.ndjson",
+      "test": "tutorial/062_emptyRec",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "13190ea3d49b78a7ab755381e7867862262bae35f54c9f8e9f588b495957d7ff",
+      "bytes": 1269
+    },
+    {
+      "file": "good/tutorial/063_boolRec.ndjson",
+      "test": "tutorial/063_boolRec",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "2e760d8bfe1ccbb4e0d5139bb26ad0fed2fab02ea7612a2b246fec201f58d4a1",
+      "bytes": 3092
+    },
+    {
+      "file": "good/tutorial/064_twoBoolRec.ndjson",
+      "test": "tutorial/064_twoBoolRec",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "db0e10d735a9a2438ee353c095f8b0d53847d78e5910adee5218925048c8e2e6",
+      "bytes": 4866
+    },
+    {
+      "file": "good/tutorial/065_andRec.ndjson",
+      "test": "tutorial/065_andRec",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "0cbe7714825cbf646d860e051ab8744174230b6d8c65120bee8683927926c02c",
+      "bytes": 3313
+    },
+    {
+      "file": "good/tutorial/066_prodRec.ndjson",
+      "test": "tutorial/066_prodRec",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "0b53e85fe97b23530b00b05ba89c1c860bf4519a0ef41f314e84114dd5df2cea",
+      "bytes": 4111
+    },
+    {
+      "file": "good/tutorial/067_pprodRec.ndjson",
+      "test": "tutorial/067_pprodRec",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "894d4388fcf6a58cad8c4047493abde7edbfd04facb8aeffbbc9673604a2e13e",
+      "bytes": 4096
+    },
+    {
+      "file": "good/tutorial/068_punitRec.ndjson",
+      "test": "tutorial/068_punitRec",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "331c4d8a6de6accecf264219290e102544368dffd5eec64e3587716e3b4880ea",
+      "bytes": 2227
+    },
+    {
+      "file": "good/tutorial/069_eqRec.ndjson",
+      "test": "tutorial/069_eqRec",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "693007cd24f0763cc6c7776840bdc05539645a0e35897af2688bde984f2551e2",
+      "bytes": 3369
+    },
+    {
+      "file": "good/tutorial/070_nRec.ndjson",
+      "test": "tutorial/070_nRec",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "2cd9396449787ce0aec6ed6348b9a0c1eeb21262b72181e3872cf19ed7c67a45",
+      "bytes": 3394
+    },
+    {
+      "file": "good/tutorial/071_rbTreeRef.ndjson",
+      "test": "tutorial/071_rbTreeRef",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "d3695868bbbea387aacddf4af324f467fc36c606051415308aa8e0d03f6c650c",
+      "bytes": 16556
+    },
+    {
+      "file": "good/tutorial/072_boolPropRec.ndjson",
+      "test": "tutorial/072_boolPropRec",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "25b41ff38e681eab9d6bc8f0bc7565378d8a54bc5b135ef3bf95d80eccea5b04",
+      "bytes": 2313
+    },
+    {
+      "file": "good/tutorial/074_existsRec.ndjson",
+      "test": "tutorial/074_existsRec",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "f50c9cc865f06f98bcbf39a55d6e149e9ee0a87f374b686f0d734dab6b9d22b8",
+      "bytes": 3665
+    },
+    {
+      "file": "good/tutorial/075_typeSingletonRecReduction.ndjson",
+      "test": "tutorial/075_typeSingletonRecReduction",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "7407a2ceb9d10d9ea28583eaa808b54b3f4fdd2c5cc8d5568424e32f27571d65",
+      "bytes": 8095
+    },
+    {
+      "file": "good/tutorial/076_sortElimPropRec.ndjson",
+      "test": "tutorial/076_sortElimPropRec",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "36ee61d2cc67052078e756bc7457b5cfaaebd85da1a96c232946e183a479a522",
+      "bytes": 5773
+    },
+    {
+      "file": "good/tutorial/077_sortElimProp2Rec.ndjson",
+      "test": "tutorial/077_sortElimProp2Rec",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "a70294fd3579d1cc5dabaa0a47579820a6e6dbd83e165e9f60362112abf2ebbe",
+      "bytes": 6794
+    },
+    {
+      "file": "good/tutorial/078_boolRecEqns.ndjson",
+      "test": "tutorial/078_boolRecEqns",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "77cb6eab3518ba916595ef8e1a58daaad404e25a293a409b01fa18d5252fc814",
+      "bytes": 11058
+    },
+    {
+      "file": "good/tutorial/079_prodRecEqns.ndjson",
+      "test": "tutorial/079_prodRecEqns",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "8c723172049fcdb9db3668bdb5035ee9dfe9dfc7c2eb42163de44748194d4097",
+      "bytes": 10305
+    },
+    {
+      "file": "good/tutorial/080_nRecReduction.ndjson",
+      "test": "tutorial/080_nRecReduction",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "1d780f803e22a66fee03182961e37aac1525a3d5766d0193a287da3096b3b648",
+      "bytes": 13051
+    },
+    {
+      "file": "good/tutorial/081_listRecReduction.ndjson",
+      "test": "tutorial/081_listRecReduction",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "a0849feb4092ce8e4ccea78a8cd60abd87b0c52a2296561ea534b0d4262b0a53",
+      "bytes": 17898
+    },
+    {
+      "file": "good/tutorial/082_RBTree.id_spec.ndjson",
+      "test": "tutorial/082_RBTree.id_spec",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "064e14578ae7d66ba118a532ca4ab4e5b484293e3d417fd2eae6fa5ad14ef67f",
+      "bytes": 49017
+    },
+    {
+      "file": "good/tutorial/083_And.right.ndjson",
+      "test": "tutorial/083_And.right",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "efa843e3b8cc007a0933fd2d89df28a6c5765b167e9ffbb441f4ec8143008212",
+      "bytes": 4353
+    },
+    {
+      "file": "good/tutorial/084_Prod.snd.ndjson",
+      "test": "tutorial/084_Prod.snd",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "7c9951ed92178b60820ebaac2a1deb69ae650aa1f7bbbf84e05b32238af7557a",
+      "bytes": 4646
+    },
+    {
+      "file": "good/tutorial/085_PProd.snd.ndjson",
+      "test": "tutorial/085_PProd.snd",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "206132d26ab0a1f34d2dce5a7e1881e745a113e59faf5bdfcf74d308aa462256",
+      "bytes": 4650
+    },
+    {
+      "file": "good/tutorial/086_PSigma.snd.ndjson",
+      "test": "tutorial/086_PSigma.snd",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "915270c38f148d3de02b357e8cad6913b3ab1ab7ac611a53e45a649aaac5544e",
+      "bytes": 5177
+    },
+    {
+      "file": "good/tutorial/089_projProp1.ndjson",
+      "test": "tutorial/089_projProp1",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "9102fd7c60e2796c11b8ecaa208363c3095ac324d3cf3f3c29ec82c67bfa401e",
+      "bytes": 8390
+    },
+    {
+      "file": "good/tutorial/091_projProp3.ndjson",
+      "test": "tutorial/091_projProp3",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "e32c2399717e657b1f24296ee1a5e78a9592d8f90ca84a6a6a104395ef06ddf1",
+      "bytes": 8390
+    },
+    {
+      "file": "good/tutorial/095_projDataIndexRec.ndjson",
+      "test": "tutorial/095_projDataIndexRec",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "b416173b8862d956e302ece51bdf2ed5dbf1e519ac3c709f2d1d2b5400d88b80",
+      "bytes": 6921
+    },
+    {
+      "file": "good/tutorial/098_projRed.ndjson",
+      "test": "tutorial/098_projRed",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "ee406aec30851a1bd7f8a491c13ccb54712f198f2951ed518b47de95cbf42d70",
+      "bytes": 10151
+    },
+    {
+      "file": "good/tutorial/099_ruleK.ndjson",
+      "test": "tutorial/099_ruleK",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "9c06a9ca2b5d6dadc1575796a858d5285695d4401cceaaf77d9c26fbc426f1da",
+      "bytes": 6624
+    },
+    {
+      "file": "good/tutorial/102_aNatLit.ndjson",
+      "test": "tutorial/102_aNatLit",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "d275cb43710dcb6df9e08de59e66e84cb4fc1eb71382c8f33308b838056e87be",
+      "bytes": 3101
+    },
+    {
+      "file": "good/tutorial/103_natLitEq.ndjson",
+      "test": "tutorial/103_natLitEq",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "749491a9044aa7df27cbc7afa32d08dc4d5feaea1eb19c28cd98790d7db8adf8",
+      "bytes": 6274
+    },
+    {
+      "file": "good/tutorial/104_proofIrrelevance.ndjson",
+      "test": "tutorial/104_proofIrrelevance",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "f98c56cc9577ce1e3bac4dd0b6a49593924d5953f45dd2d25c44a84971d3bcea",
+      "bytes": 5154
+    },
+    {
+      "file": "good/tutorial/106_proofIrrelevanceWhnf.ndjson",
+      "test": "tutorial/106_proofIrrelevanceWhnf",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "724ea566fd355aa187a5fe00efddff4b41df00951e7e4363f323f11853888d71",
+      "bytes": 5757
+    },
+    {
+      "file": "good/tutorial/107_unitEta1.ndjson",
+      "test": "tutorial/107_unitEta1",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "eb25dbed39c8c19e6c1ea7b7c0332941e0249c96154bff155f8805d04151da78",
+      "bytes": 6395
+    },
+    {
+      "file": "good/tutorial/108_unitEta2.ndjson",
+      "test": "tutorial/108_unitEta2",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "0102ea0fac3148dfcd800dcccd53237b3dd196186659a3d811761da4bedbc91f",
+      "bytes": 6092
+    },
+    {
+      "file": "good/tutorial/109_unitEta3.ndjson",
+      "test": "tutorial/109_unitEta3",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "22a713f36ca06b000c93140a92e9a5e2c85abb769924764b3f1e764cb199be0b",
+      "bytes": 6173
+    },
+    {
+      "file": "good/tutorial/111_structEta.ndjson",
+      "test": "tutorial/111_structEta",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "e47bd6975be97f3218b31e85071af1e0cec4279f5a6478abb12e3e1c574c35c2",
+      "bytes": 12836
+    },
+    {
+      "file": "good/tutorial/113_funEta.ndjson",
+      "test": "tutorial/113_funEta",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "f4e38147fd95133f0ce4bf66dbb9c433704df341f4732012ca1b7d26e1246225",
+      "bytes": 5335
+    },
+    {
+      "file": "good/tutorial/114_funEtaDep.ndjson",
+      "test": "tutorial/114_funEtaDep",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "28a07e484e8720dfc991c1074a3881d1c16ead16b75c9a8743c1cd46a21bec5d",
+      "bytes": 5443
+    },
+    {
+      "file": "good/tutorial/118_reduceCtorParamRefl.mk.ndjson",
+      "test": "tutorial/118_reduceCtorParamRefl.mk",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "0289b5264d284c7c2b61033465d39461ddce70a0cdd909ee658d85bf10f544ee",
+      "bytes": 4642
+    },
+    {
+      "file": "good/tutorial/119_reduceCtorParamRefl2.mk.ndjson",
+      "test": "tutorial/119_reduceCtorParamRefl2.mk",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "8997c0d3a515185fb3518393dbe78e44471455f622ac7bf9e82c68bff51bb2cd",
+      "bytes": 4642
+    },
+    {
+      "file": "good/tutorial/120_rTreeRec.ndjson",
+      "test": "tutorial/120_rTreeRec",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "6207d2f2f68b24ff37fba20c4ac3849571deb8d3105bc9cefd37ba4f28dc2d7f",
+      "bytes": 5639
+    },
+    {
+      "file": "good/tutorial/121_rtreeRecReduction.ndjson",
+      "test": "tutorial/121_rtreeRecReduction",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "1d4eacdbbdbe3edc8ea1faf3526eef09beadbbd2843b5dba67262f405b781330",
+      "bytes": 11099
+    },
+    {
+      "file": "good/tutorial/122_accRecType.ndjson",
+      "test": "tutorial/122_accRecType",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "d94022372034a2e572249b9704b812beb90a5437a660bda59fd7439d61d55da7",
+      "bytes": 7649
+    },
+    {
+      "file": "good/tutorial/123_accRecReduction.ndjson",
+      "test": "tutorial/123_accRecReduction",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "3ea1584059e9bb2ed3f9dbea8e58c9c6f78592f80a20c5cb159ae92bb9079f7f",
+      "bytes": 13736
+    },
+    {
+      "file": "good/tutorial/125_quotMkType.ndjson",
+      "test": "tutorial/125_quotMkType",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "b160ff5b97509ad3029f1895bfe1153f9e03f1a33c99ec50ee1bb87d3406f69d",
+      "bytes": 6450
+    },
+    {
+      "file": "good/tutorial/126_quotIndType.ndjson",
+      "test": "tutorial/126_quotIndType",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "997935987ef6b1920cc0065465ccb50eb1668bf69159eebbd58dd88b6dc2e2fb",
+      "bytes": 6490
+    },
+    {
+      "file": "good/tutorial/127_quotLiftType.ndjson",
+      "test": "tutorial/127_quotLiftType",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "317a04eff4dabf9edf601736e243d2788aeaa2d7972099dff4bb777b4f51fc3f",
+      "bytes": 6496
+    },
+    {
+      "file": "good/tutorial/128_quotSoundType.ndjson",
+      "test": "tutorial/128_quotSoundType",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "38c9bdfaaf1e3cd494a7725a4eb9bc231d5ce61f097a5b98e38c469799f7400f",
+      "bytes": 7332
+    },
+    {
+      "file": "good/tutorial/129_quotLiftReduction.ndjson",
+      "test": "tutorial/129_quotLiftReduction",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "ae980cf502f90c84131b1705850c1acf18a969fdc1fe511b9b8eb769adbd79c8",
+      "bytes": 7957
+    },
+    {
+      "file": "good/tutorial/130_quotIndReduction.ndjson",
+      "test": "tutorial/130_quotIndReduction",
+      "outcome": "accept",
+      "pinned_nanoclo_status": 0,
+      "sha256": "0053779f82af2dfc35cd6c866a66be4496008589b11c22e6b80e91835957bedd",
+      "bytes": 7817
+    },
+    {
+      "file": "either/corner-cases/alg-conv-trans-acc-left.ndjson",
+      "test": "corner-cases/alg-conv-trans-acc-left",
+      "outcome": "either",
+      "pinned_nanoclo_status": 0,
+      "sha256": "323a6140d9acc906193ddc22fa4f3391a3f259357853427c2f82382c71a1e051",
+      "bytes": 68649
+    },
+    {
+      "file": "either/corner-cases/alg-conv-trans-acc-right.ndjson",
+      "test": "corner-cases/alg-conv-trans-acc-right",
+      "outcome": "either",
+      "pinned_nanoclo_status": 0,
+      "sha256": "ffe25858f02f0dc022bca04e6f8e6fb62f8342e8dc6ee1376af987c611360e43",
+      "bytes": 68916
+    },
+    {
+      "file": "either/corner-cases/alg-conv-trans-acc.ndjson",
+      "test": "corner-cases/alg-conv-trans-acc",
+      "outcome": "either",
+      "pinned_nanoclo_status": 1,
+      "sha256": "cadf40e15ac167941069ac47b3e2052231e706cb671ff416fb08ffaa384387e8",
+      "bytes": 67626
+    },
+    {
+      "file": "either/corner-cases/alg-conv-trans-quot-left-def.ndjson",
+      "test": "corner-cases/alg-conv-trans-quot-left-def",
+      "outcome": "either",
+      "pinned_nanoclo_status": 0,
+      "sha256": "e3bc56ce77489c523e9d1cadc766196d05640c225aeb3ce34b3e249c1b1346a9",
+      "bytes": 10774
+    },
+    {
+      "file": "either/corner-cases/alg-conv-trans-quot-left.ndjson",
+      "test": "corner-cases/alg-conv-trans-quot-left",
+      "outcome": "either",
+      "pinned_nanoclo_status": 0,
+      "sha256": "12d602755c20afa8de8afb93a0ce1aa461e5d63b48447e8798e1ccdcb3db6e3f",
+      "bytes": 8833
+    },
+    {
+      "file": "either/corner-cases/alg-conv-trans-quot-right.ndjson",
+      "test": "corner-cases/alg-conv-trans-quot-right",
+      "outcome": "either",
+      "pinned_nanoclo_status": 0,
+      "sha256": "cb4605c2faee666f767eaa0c7dd24991f9973614cee22cd700ec94aa8341e853",
+      "bytes": 9254
+    },
+    {
+      "file": "either/corner-cases/alg-conv-trans-quot.ndjson",
+      "test": "corner-cases/alg-conv-trans-quot",
+      "outcome": "either",
+      "pinned_nanoclo_status": 1,
+      "sha256": "e4c6d7e6536e6cad2338f079efcb41b9889a988b753661ee8ac90eb7bf798551",
+      "bytes": 8680
+    },
+    {
+      "file": "either/corner-cases/imax-right-successor.ndjson",
+      "test": "corner-cases/imax-right-successor",
+      "outcome": "either",
+      "pinned_nanoclo_status": 0,
+      "sha256": "f367b7901ba740dfb574578713f694a1836aef72d0439a520f94a72292d90fd7",
+      "bytes": 806
+    },
+    {
+      "file": "either/corner-cases/positivity-whnf.ndjson",
+      "test": "corner-cases/positivity-whnf",
+      "outcome": "either",
+      "pinned_nanoclo_status": 1,
+      "sha256": "5e1c3ea262e5d57f0ffef2cbb7009a5a9020a977b648f109c0b0ab51ef3fa664",
+      "bytes": 4808
+    },
+    {
+      "file": "either/corner-cases/proj-maybe-prop-past.ndjson",
+      "test": "corner-cases/proj-maybe-prop-past",
+      "outcome": "either",
+      "pinned_nanoclo_status": 1,
+      "sha256": "f5293856199b9b3eb82b3abb4bcb06121807cf9c828a049cfcc9c2f022002e38",
+      "bytes": 8313
+    },
+    {
+      "file": "either/corner-cases/proj-maybe-prop.ndjson",
+      "test": "corner-cases/proj-maybe-prop",
+      "outcome": "either",
+      "pinned_nanoclo_status": 1,
+      "sha256": "b454eb79be1a89d37eea09a670a8fc38d30fd0b3215c57d130ab4c984d531894",
+      "bytes": 8308
+    },
+    {
+      "file": "either/corner-cases/proof-param-swap.ndjson",
+      "test": "corner-cases/proof-param-swap",
+      "outcome": "either",
+      "pinned_nanoclo_status": 1,
+      "sha256": "25cfb47d4c80ebe1ec61931898df8e6bd8d06793aebf3ee8b2a7cd00beca1abc",
+      "bytes": 2961
+    },
+    {
+      "file": "either/corner-cases/subject-reduction-redex.ndjson",
+      "test": "corner-cases/subject-reduction-redex",
+      "outcome": "either",
+      "pinned_nanoclo_status": 0,
+      "sha256": "00c6d1b7a742c440fcbc7a7f1688635a1b90263dfc6d73717eab9e4693c2dbe1",
+      "bytes": 67816
+    },
+    {
+      "file": "either/corner-cases/subject-reduction-reduct.ndjson",
+      "test": "corner-cases/subject-reduction-reduct",
+      "outcome": "either",
+      "pinned_nanoclo_status": 1,
+      "sha256": "0668cf5376e96ae938b5ba87e65a9e8ad92a6c9aa7030cdbdc284adb3ac76fcb",
+      "bytes": 66750
+    },
+    {
+      "file": "either/nested-nonuniform-param.ndjson",
+      "test": "nested-nonuniform-param",
+      "outcome": "either",
+      "pinned_nanoclo_status": 0,
+      "sha256": "aaab3a45abbef89db7b24cef96e7ca6a6901e87a38baeec56118846c64a75c56",
+      "bytes": 9415
+    },
+    {
+      "file": "either/corner-cases/eta-ctor.ndjson",
+      "test": "corner-cases/eta-ctor",
+      "outcome": "either",
+      "pinned_nanoclo_status": 1,
+      "sha256": "80026aac81ba1318c87a6b3543965588d258a4d34e08ee613f8b0f5f036b84bc",
+      "bytes": 9234
+    },
+    {
+      "file": "either/corner-cases/eta-rule-k.ndjson",
+      "test": "corner-cases/eta-rule-k",
+      "outcome": "either",
+      "pinned_nanoclo_status": 1,
+      "sha256": "d4950ae29536d8d609345328752c8efc6ca579829fae7fefa27bec9234c5dea6",
+      "bytes": 6626
+    },
+    {
+      "file": "good/cedar.ndjson",
+      "test": "cedar",
+      "outcome": "accept",
+      "sha256": "f8d47c6fbda4515cdd168eea29a2d9f49433f421e15d8c58133462d626508539",
+      "process_status": 0,
+      "evidence": "optimization-measurements.json.gz"
+    },
+    {
+      "file": "good/con-leche.ndjson",
+      "test": "con-leche",
+      "outcome": "accept",
+      "sha256": "bf47023cfd2986e67e77095eb7209c58a37ac4e7db649fd7ce5b38da73feb316",
+      "process_status": 0,
+      "evidence": "optimization-measurements.json.gz"
+    },
+    {
+      "file": "good/cslib.ndjson",
+      "test": "cslib",
+      "outcome": "accept",
+      "sha256": "c636b50ee32aed97fa728f3576cbff5663f1f7807c560663b6d7c3722045c58f",
+      "process_status": 0,
+      "evidence": "optimization-measurements.json.gz"
+    },
+    {
+      "file": "good/init.ndjson",
+      "test": "init",
+      "outcome": "accept",
+      "sha256": "02a2260b17c8e5be2eb0463c7d3131c35889337b51817f56756faee1241b7b91",
+      "process_status": 0,
+      "evidence": "optimization-measurements.json.gz"
+    },
+    {
+      "file": "good/mathlib.ndjson",
+      "test": "mathlib",
+      "outcome": "accept",
+      "sha256": "ca2ec20fd063b61e71867b2975c81bd989af9f879b4886b8f08cd23c767a47bb",
+      "process_status": 0,
+      "evidence": "optimization-measurements.json.gz"
+    },
+    {
+      "file": "good/perf/magma-string-n4.ndjson",
+      "test": "perf/magma-string-n4",
+      "outcome": "accept",
+      "sha256": "e6f1f83c80c670c5bbd7b532e228e8624941e7d6de4b9bb25f71bdc9282f07dd",
+      "process_status": 0,
+      "evidence": "optimization-measurements.json.gz"
+    },
+    {
+      "file": "good/perf/magma-string-pair-n9.ndjson",
+      "test": "perf/magma-string-pair-n9",
+      "outcome": "accept",
+      "sha256": "b10875abef30d9b71126537270f481fd855149a563ff35d6d5b047d6d5072cd7",
+      "process_status": 0,
+      "evidence": "optimization-measurements.json.gz"
+    },
+    {
+      "file": "good/std.ndjson",
+      "test": "std",
+      "outcome": "accept",
+      "sha256": "0f7993829d6fcc8b07d177a3879024fbbc8908f7c6fd9cb2fa93370e4397e204",
+      "process_status": 0,
+      "evidence": "optimization-measurements.json.gz"
+    }
+  ]
+}

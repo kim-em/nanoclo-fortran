@@ -1,0 +1,195 @@
+{
+  "arena_revision": "526bb2280b6d0cff670ee6e28725f96da960cc32",
+  "records": [
+    {
+      "test": "corner-cases/alg-conv-trans-acc-left",
+      "config": {
+        "description": "The creative half of `corner-cases/alg-conv-trans-acc`. `Acc.rec` is stuck\non the variable `a`, and proof irrelevance admits any other proof of\n`Acc (\u00b7 < \u00b7) 1` in its place, including one with a constructor at the head.\nGiven both sides, a checker verifies this immediately; producing the\nright-hand side unprompted is the step no algorithm takes.\n",
+        "leanfile": "tests/corner-cases/alg-conv.lean",
+        "export-decls": [
+          "left"
+        ],
+        "outcome": "either"
+      },
+      "sha256": "323a6140d9acc906193ddc22fa4f3391a3f259357853427c2f82382c71a1e051",
+      "bytes": 68649
+    },
+    {
+      "test": "corner-cases/alg-conv-trans-acc-right",
+      "config": {
+        "description": "The mechanical half of `corner-cases/alg-conv-trans-acc`. With a\nconstructor in the major premise, `Acc.rec` fires and `step` descends to the\npredecessor `0`.\n",
+        "leanfile": "tests/corner-cases/alg-conv.lean",
+        "export-decls": [
+          "right"
+        ],
+        "outcome": "either"
+      },
+      "sha256": "ffe25858f02f0dc022bca04e6f8e6fb62f8342e8dc6ee1376af987c611360e43",
+      "bytes": 68916
+    },
+    {
+      "test": "corner-cases/alg-conv-trans-acc",
+      "config": {
+        "description": "As Lean's type theory has undecidable conversion (a.k.a. definitional equality),\nthere are bound to be gaps between so called \"algorithmic\" conversion (that which is\nimplemented by a typechecker), and the \"declarative\" conversion.\n\nIn the official kernel, algorithmic conversion fails to be transitive. `f 1 a`\nis a normal form: `a` is a variable, so `Acc.rec` cannot fire on it. Proof\nirrelevance admits any other proof of `Acc (\u00b7 < \u00b7) 1` in its place, and\n`Acc.intro 1 fun _ => Acc.inv a` carries a constructor at the head, so it\nreduces. `left` is that substitution, `right` the reduction it unblocks, and\n`trans` chains the two.\n\n`acc` asks for the endpoints on their own, which means inventing the middle\nterm: choosing, among the proofs of a proposition, the one that happens to\nreduce the right way. The kernel has no reason to go looking, the left side\nbeing normal already, and unfolding regardless does not terminate here, as\neach step makes the term larger.\n\nReferences:\n\n- Mario Carneiro, *The Type Theory of Lean*, MSc thesis\n",
+        "leanfile": "tests/corner-cases/alg-conv.lean",
+        "export-decls": [
+          "trans"
+        ],
+        "outcome": "either"
+      },
+      "sha256": "cadf40e15ac167941069ac47b3e2052231e706cb671ff416fb08ffaa384387e8",
+      "bytes": 67626
+    },
+    {
+      "test": "corner-cases/alg-conv-trans-quot-left-def",
+      "config": {
+        "description": "`left` with `Quot.lift` behind a definition. WHNF does not unfold `lift`, so\nthe arguments are compared and proof irrelevance applies.\n",
+        "leanfile": "tests/corner-cases/alg-conv-trans-quot.lean",
+        "export-decls": [
+          "left'"
+        ],
+        "outcome": "either"
+      },
+      "sha256": "e3bc56ce77489c523e9d1cadc766196d05640c225aeb3ce34b3e249c1b1346a9",
+      "bytes": 10774
+    },
+    {
+      "test": "corner-cases/alg-conv-trans-quot-left",
+      "config": {
+        "description": "`Quot r` is a `Prop`, so proof irrelevance relates `q` and `Quot.mk r z`.\nHowever the official kernel does WHNF first, reducing the right side to `f z`,\nso congruence never compares the arguments.\n",
+        "leanfile": "tests/corner-cases/alg-conv-trans-quot.lean",
+        "export-decls": [
+          "left"
+        ],
+        "outcome": "either"
+      },
+      "sha256": "12d602755c20afa8de8afb93a0ce1aa461e5d63b48447e8798e1ccdcb3db6e3f",
+      "bytes": 8833
+    },
+    {
+      "test": "corner-cases/alg-conv-trans-quot-right",
+      "config": {
+        "description": "Quotient computation rule.\n",
+        "leanfile": "tests/corner-cases/alg-conv-trans-quot.lean",
+        "export-decls": [
+          "right"
+        ],
+        "outcome": "either"
+      },
+      "sha256": "cb4605c2faee666f767eaa0c7dd24991f9973614cee22cd700ec94aa8341e853",
+      "bytes": 9254
+    },
+    {
+      "test": "corner-cases/alg-conv-trans-quot",
+      "config": {
+        "description": "`left` composed with `right`. Quotients of propositions cause\nalgorithmic conversion transitivity to fail because the typechecker must\ncreatively synthesise the representative of the quotient, and\nproof irrelevance is definitional.\n\nReferences:\n\n- Mario Carneiro, *The Type Theory of Lean*, MSc thesis\n",
+        "leanfile": "tests/corner-cases/alg-conv-trans-quot.lean",
+        "export-decls": [
+          "trans"
+        ],
+        "outcome": "either"
+      },
+      "sha256": "e4c6d7e6536e6cad2338f079efcb41b9889a988b753661ee8ac90eb7bf798551",
+      "bytes": 8680
+    },
+    {
+      "test": "corner-cases/imax-right-successor",
+      "config": {
+        "description": "Universe-level normalization corner cases. The declarations use `imax u 1`\nand `imax u (v + 1)` where their declared types use the corresponding\n`max` levels. A checker may reject these hand-crafted exports using a more\nconservative normalization, or accept them by recognizing that the right\noperand is nonzero.\n",
+        "leanfile": "tests/corner-cases/imax-right-successor.lean",
+        "export-decls": [
+          "imaxRightOne",
+          "imaxRightSucc"
+        ],
+        "outcome": "either"
+      },
+      "sha256": "f367b7901ba740dfb574578713f694a1836aef72d0439a520f94a72292d90fd7",
+      "bytes": 806
+    },
+    {
+      "test": "corner-cases/positivity-whnf",
+      "config": {
+        "description": "A recursive occurrence appears in an unused argument of a reducible\ndefinition in a constructor field.\n\nThe declaration has the following shape:\n\n```lean\ndef Ignore (A B : Type) : Type := A\n\ninductive T : Type where\n  | mk (f : Ignore Unit T -> T) : T\n```\n\n`Ignore` takes a second type argument but does not use it, so `Ignore Unit T` reduces to `Unit`. A checker that inspects the unreduced constructor field may reject the syntactic occurrence of `T` in the domain of the arrow. A checker that first weak-head-normalizes the field type may instead see `(Unit -> T) -> T` and accept it. The test therefore has outcome `eithe r`.\n\nA checker may reject it syntactically or accept it after reducing the field type.\n",
+        "file": "tests/corner-cases/positivity-whnf.ndjson",
+        "outcome": "either"
+      },
+      "sha256": "5e1c3ea262e5d57f0ffef2cbb7009a5a9020a977b648f109c0b0ab51ef3fa664",
+      "bytes": 4808
+    },
+    {
+      "test": "corner-cases/proj-maybe-prop-past",
+      "config": {
+        "description": "The same as `corner-cases/proj-maybe-prop`, for a projection that only has\nto step over such a field.\n\n`MaybeProp.tail` is a proof for every `u`, so the field asked for here is\nunobjectionable even under the restrictive reading. But reaching it means\nwalking past `field`, which `proof` depends on, and that is where the check\non a genuine proposition (the tutorial's `projProp6`) fires. A checker that\nrejects `corner-cases/proj-maybe-prop` therefore rejects this one as well,\nat field 0 rather than at field 2, and that remains a reasonable choice for\nthe same reason. See <https://github.com/leanprover/lean4/issues/7637> for\ndiscussion.\n",
+        "leanfile": "tests/corner-cases/proj-maybe-prop.lean",
+        "export-decls": [
+          "projMaybePropPast"
+        ],
+        "outcome": "either"
+      },
+      "sha256": "f5293856199b9b3eb82b3abb4bcb06121807cf9c828a049cfcc9c2f022002e38",
+      "bytes": 8313
+    },
+    {
+      "test": "corner-cases/proj-maybe-prop",
+      "config": {
+        "description": "Projecting out of a structure that may or may not be a proposition.\n\n`MaybeProp` is a structure whose sort is a bare level parameter: a\nproposition for `u := 0` and a data type for every other `u`. Lean's\n`inductive` command refuses to declare one (\"the resulting universe is not\n`Prop`, but it may be `Prop` for some parameter values\"), but the kernel\naccepts it. The exported definition projects out its first field,\n`field : PUnit.{u}`.\n\nThe official kernel accepts this. The field is not a proof for every `u`,\nbut the projection is sound at every instantiation: `MaybeProp.{u}` is a\nproposition only for `u := 0`, and there the field's type `PUnit.{0}` is a\nproposition too. That is no coincidence. A structure that is not a `Prop`\nhad every constructor field's universe checked against its resulting\nuniverse (see the tutorial's `typeWithTooHighTypeField`), here `u \u2264 u`, and\nsuch an inequality survives instantiation \u2014 so wherever the structure does\nturn out to be a proposition, so do all of its fields.\n\nAt the same time, the official kernel here allows more projections than the\nrecursor allows: `MaybeProp.rec` eliminates into `Prop` only, so this\nprojection cannot be expressed through the recursor. The elaborator does not\ncurrently rely on this extra power, so for now it is reasonable for a\nchecker to be more restrictive here and reject the projection \u2014 for example\nby asking \"could this be a proposition?\" and then demanding that the field\nbe definitely a proof. See\n<https://github.com/leanprover/lean4/issues/7637> for discussion.\n",
+        "leanfile": "tests/corner-cases/proj-maybe-prop.lean",
+        "export-decls": [
+          "projMaybeProp"
+        ],
+        "outcome": "either"
+      },
+      "sha256": "b454eb79be1a89d37eea09a670a8fc38d30fd0b3215c57d130ab4c984d531894",
+      "bytes": 8308
+    },
+    {
+      "test": "corner-cases/proof-param-swap",
+      "config": {
+        "description": "Swaps two proof parameters in an inductive constructor result. Checkers may\neither reject the swap or accept it using proof irrelevance.\n",
+        "file": "tests/corner-cases/proof-param-swap.ndjson",
+        "outcome": "either"
+      },
+      "sha256": "25cfb47d4c80ebe1ec61931898df8e6bd8d06793aebf3ee8b2a7cd00beca1abc",
+      "bytes": 2961
+    },
+    {
+      "test": "corner-cases/subject-reduction-redex",
+      "config": {
+        "description": "Test for subject reduction, as in Carneiro's thesis.\n\nThe annotation on the lambda writes the middle term of\n`corner-cases/alg-conv-trans-acc` down by hand, sparing the kernel from\nhaving to invent it. The body checks against `right`, the argument against\n`left`, and the two endpoints are never compared.\n\nReferences:\n\n- Mario Carneiro, *The Type Theory of Lean*, MSc thesis\n",
+        "leanfile": "tests/corner-cases/alg-conv.lean",
+        "export-decls": [
+          "redex"
+        ],
+        "outcome": "either"
+      },
+      "sha256": "00c6d1b7a742c440fcbc7a7f1688635a1b90263dfc6d73717eab9e4693c2dbe1",
+      "bytes": 67816
+    },
+    {
+      "test": "corner-cases/subject-reduction-reduct",
+      "config": {
+        "description": "Beta erases the annotation of `corner-cases/subject-reduction-redex`, and\nwith it the middle term, leaving the two endpoints to compare: the conversion\nof `corner-cases/alg-conv-trans-acc`. A term the kernel accepts thus\nreduces to one it rejects.\n\nReferences:\n\n- Mario Carneiro, *The Type Theory of Lean*, MSc thesis\n",
+        "leanfile": "tests/corner-cases/alg-conv.lean",
+        "export-decls": [
+          "reduct"
+        ],
+        "outcome": "either"
+      },
+      "sha256": "0668cf5376e96ae938b5ba87e65a9e8ad92a6c9aa7030cdbdc284adb3ac76fcb",
+      "bytes": 66750
+    },
+    {
+      "test": "nested-nonuniform-param",
+      "config": {
+        "description": "Checks that a parameter supplied to a nested inductive occurrence really acts\nas the datatype's parameter, i.e. that it is the parameter itself and does not\nchange between recursive occurrences (as is already enforced for non-nested\noccurrences).\n\nThe inductive `E : W \u2192 Type` has constructor\n`E.mk : (w : W) \u2192 L (E \u27e8false\u27e9) \u2192 E w`, where `L (\u03b1 : Type)` is nested. The\noccurrence `E \u27e8false\u27e9` inside the nested `L` uses the constant `\u27e8false\u27e9` in\nthe position of `E`'s parameter, instead of the actual parameter `w`. That\nargument is type-correct, so it is not caught by merely type-checking the\nnested application (leanprover/lean4#14577); a correct checker must also\nverify that it is the expected parameter.\n\nThis particular declaration is not known to yield a proof of `False`: here `L`\nstores no value of type `\u03b1`, so the nested occurrence is phantom and `E w` is\nisomorphic to `Unit` for every `w`. The variant where `L` actually stores an\n`\u03b1` (so recursion would descend into an `E \u27e8false\u27e9` while the motive is fixed\nat `E w`) is already rejected by the kernel's positivity check (\"non valid\noccurrence\"). Since it is not a demonstrated unsoundness, it is not settled\nwhether a checker should accept or reject it, so the expected outcome is\n`either` and the test does not count towards completeness or soundness.\n\nOrigin: raised by @arthur-adjedj on leanprover/lean4#14577\n(https://github.com/leanprover/lean4/pull/14577#issuecomment-5101819377) as a\ncase not covered by that PR's fix; related to leanprover/lean4#14576.\n",
+        "leanfile": "tests/nested-nonuniform-param.lean",
+        "export-decls": [
+          "E"
+        ],
+        "outcome": "either"
+      },
+      "sha256": "aaab3a45abbef89db7b24cef96e7ca6a6901e87a38baeec56118846c64a75c56",
+      "bytes": 9415
+    }
+  ]
+}

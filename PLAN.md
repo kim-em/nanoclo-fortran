@@ -1,6 +1,10 @@
 # nanoclo-fortran: nanoclo's Lean 4 kernel in Fortran 2018, struct-of-arrays
 
-Status: plan only (2026-09-12). Nothing implemented yet.
+Status: implemented and validated (2026-09-12). All 200 verdicts match nanoclo,
+all 26 per-declaration Init counters match, and all measurements are complete.
+See [PROGRESS.md](PROGRESS.md), the [original measurement report](docs/measurements.md)
+and the later [optimization report](docs/optimization-report.md).
+The original goal and success criteria below are preserved.
 
 ## Goal
 

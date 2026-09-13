@@ -1,0 +1,22 @@
+{
+  "binary_sha256": "57b72b8327e1952d6cd1e8616a599dcdda8f7bf1a1b8f26eda8b83791812192e",
+  "counter_fields": 26,
+  "checks": {
+    "init": {
+      "verdicts": 1,
+      "accepted_counter_streams": 1,
+      "declarations": 54475
+    },
+    "corpus": {
+      "verdicts": 192,
+      "accepted_counter_streams": 119,
+      "declarations": 7290
+    },
+    "either": {
+      "verdicts": 15,
+      "accepted_counter_streams": 8,
+      "declarations": 243
+    }
+  },
+  "four_worker_either_cases": 15
+}

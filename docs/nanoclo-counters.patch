@@ -1,0 +1,18 @@
+--- a/src/tc.rs
++++ b/src/tc.rs
+@@ -187,6 +187,15 @@
+                                 let name = self.with_ctx(|cc| format!("{:?}", cc.debug_print(declar.info().name)));
+                                 eprintln!("DC\t{}\t{}\t{}\t{}\t{}", i, name, c[1], c[3], c[0]);
+                             }
++                            if std::env::var("NANOCLO_DECLCTRS_ALL").is_ok() {
++                                let name = self.with_ctx(|cc| format!("{:?}", cc.debug_print(declar.info().name)));
++                                eprint!("DC26\t{}\t{}", i, name);
++                                for count in ctx.rp.ctrs.iter() {
++                                    eprint!("\t{}", count);
++                                }
++                                eprintln!();
++                            }
++
+                             ctx.rp.flush_ctrs();
+                         }
+                     })

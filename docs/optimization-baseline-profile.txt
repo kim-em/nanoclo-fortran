@@ -1,0 +1,45 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 6K of event 'instructions:u'
+# Event count (approx.): 322000000000
+#
+# Overhead  Symbol                                             IPC   [IPC Coverage]
+# ........  .................................................  ....................
+#
+    20.57%  [.] __hash_table_MOD_table_get                     -      -            
+    12.34%  [.] __hash_table_MOD_put_reserved.isra.0           -      -            
+     9.36%  [.] __hash_table_MOD_table_get.constprop.0.isra.0  -      -            
+     7.30%  [.] __base_MOD_grow                                -      -            
+     4.57%  [.] __kernel_MOD_nb_eval                           -      -            
+     3.74%  [.] __memset_avx512_unaligned_erms                 -      -            
+     2.97%  [.] __json_MOD_value                               -      -            
+     2.83%  [.] __nbe_MOD_alloc                                -      -            
+     2.33%  [.] __hash_table_MOD_table_reserve                 -      -            
+     2.08%  [.] __expr_MOD_intern                              -      -            
+     1.61%  [.] __read_sets_MOD_uses_mask                      -      -            
+     1.38%  [.] __memcmp_evex_movbe                            -      -            
+     1.34%  [.] __closure_MOD_lookup                           -      -            
+     1.27%  [.] __json_MOD_string_token                        -      -            
+     1.27%  [.] __memmove_avx512_unaligned_erms                -      -            
+     1.26%  [.] __closure_MOD_eq_mod.part.0                    -      -            
+     1.24%  [.] __json_MOD_add                                 -      -            
+     1.20%  [.] __kernel_MOD_nb_force                          -      -            
+     1.12%  [.] __closure_MOD_intern                           -      -            
+     0.81%  [.] __parser_MOD_indexed_uint                      -      -            
+     0.78%  [.] __kernel_MOD_work_slot                         -      -            
+     0.75%  [.] __kernel_MOD_infer_go                          -      -            
+     0.67%  [.] __kernel_MOD_nb_apply                          -      -            
+     0.67%  [.] __kernel_MOD_nb_delay                          -      -            
+     0.65%  [.] __spines_MOD_snoc                              -      -            
+     0.64%  [.] malloc                                         -      -            
+     0.59%  [.] __expr_MOD_subst_aux                           -      -            
+     0.56%  [.] __parser_MOD_scan                              -      -            
+     0.51%  [.] _gfortran_select_string                        -      -            
+
+
+#
+# (Tip: To count events every 1000 msec: perf stat -I 1000)
+#

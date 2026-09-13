@@ -1,0 +1,12 @@
+version: "Fortran port of nanoclo 4cdd12f"
+description: |
+  Fortran 2018 port of nanoclo 4cdd12f, with struct-of-arrays arenas,
+  shared immutable exported expressions, and private OpenMP checker contexts.
+# Local source checkout; adjust this path when installing on another machine.
+threads: 4
+build: |
+  nix shell nixpkgs#gfortran -c make -C /home/kim/nanoclo-fortran BUILD=build/arena
+run: |
+  ulimit -s unlimited
+  export OMP_STACKSIZE=1G
+  /home/kim/nanoclo-fortran/build/arena/nanoclo-fortran --jobs=4 "$IN"

@@ -1,0 +1,19 @@
+name: Check
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: cachix/install-nix-action@v31
+      - name: Release regression suite
+        run: nix develop --command make test
+      - name: Pinned arena corpus (four workers)
+        run: nix develop --command python3 tests/test_arena_snapshot.py build/nanoclo-fortran --jobs 4
+      - name: Bounds and overflow checks
+        run: nix develop --command make debug
+      - name: Pinned arena corpus with runtime checks
+        run: nix develop --command python3 tests/test_arena_snapshot.py build/debug/nanoclo-fortran --jobs 1

@@ -1,0 +1,97 @@
+{
+  "arena_revision": "526bb2280b6d0cff670ee6e28725f96da960cc32",
+  "binary_sha256": "57b72b8327e1952d6cd1e8616a599dcdda8f7bf1a1b8f26eda8b83791812192e",
+  "jobs": 4,
+  "results": [
+    {
+      "file": "corner-cases/alg-conv-trans-acc-left.ndjson",
+      "input_sha256": "323a6140d9acc906193ddc22fa4f3391a3f259357853427c2f82382c71a1e051",
+      "process_status": 0,
+      "stderr": ""
+    },
+    {
+      "file": "corner-cases/alg-conv-trans-acc-right.ndjson",
+      "input_sha256": "ffe25858f02f0dc022bca04e6f8e6fb62f8342e8dc6ee1376af987c611360e43",
+      "process_status": 0,
+      "stderr": ""
+    },
+    {
+      "file": "corner-cases/alg-conv-trans-acc.ndjson",
+      "input_sha256": "cadf40e15ac167941069ac47b3e2052231e706cb671ff416fb08ffaa384387e8",
+      "process_status": 1,
+      "stderr": "trans: declaration value has wrong type\n"
+    },
+    {
+      "file": "corner-cases/alg-conv-trans-quot-left-def.ndjson",
+      "input_sha256": "e3bc56ce77489c523e9d1cadc766196d05640c225aeb3ce34b3e249c1b1346a9",
+      "process_status": 0,
+      "stderr": ""
+    },
+    {
+      "file": "corner-cases/alg-conv-trans-quot-left.ndjson",
+      "input_sha256": "12d602755c20afa8de8afb93a0ce1aa461e5d63b48447e8798e1ccdcb3db6e3f",
+      "process_status": 0,
+      "stderr": ""
+    },
+    {
+      "file": "corner-cases/alg-conv-trans-quot-right.ndjson",
+      "input_sha256": "cb4605c2faee666f767eaa0c7dd24991f9973614cee22cd700ec94aa8341e853",
+      "process_status": 0,
+      "stderr": ""
+    },
+    {
+      "file": "corner-cases/alg-conv-trans-quot.ndjson",
+      "input_sha256": "e4c6d7e6536e6cad2338f079efcb41b9889a988b753661ee8ac90eb7bf798551",
+      "process_status": 1,
+      "stderr": "trans: declaration value has wrong type\n"
+    },
+    {
+      "file": "corner-cases/imax-right-successor.ndjson",
+      "input_sha256": "f367b7901ba740dfb574578713f694a1836aef72d0439a520f94a72292d90fd7",
+      "process_status": 0,
+      "stderr": ""
+    },
+    {
+      "file": "corner-cases/positivity-whnf.ndjson",
+      "input_sha256": "5e1c3ea262e5d57f0ffef2cbb7009a5a9020a977b648f109c0b0ab51ef3fa664",
+      "process_status": 1,
+      "stderr": "LALReduciblePositivity: non-positive inductive occurrence\n"
+    },
+    {
+      "file": "corner-cases/proj-maybe-prop-past.ndjson",
+      "input_sha256": "f5293856199b9b3eb82b3abb4bcb06121807cf9c828a049cfcc9c2f022002e38",
+      "process_status": 1,
+      "stderr": "projMaybePropPast: invalid structure projection or Prop elimination\n"
+    },
+    {
+      "file": "corner-cases/proj-maybe-prop.ndjson",
+      "input_sha256": "b454eb79be1a89d37eea09a670a8fc38d30fd0b3215c57d130ab4c984d531894",
+      "process_status": 1,
+      "stderr": "projMaybeProp: invalid structure projection or Prop elimination\n"
+    },
+    {
+      "file": "corner-cases/proof-param-swap.ndjson",
+      "input_sha256": "25cfb47d4c80ebe1ec61931898df8e6bd8d06793aebf3ee8b2a7cd00beca1abc",
+      "process_status": 1,
+      "stderr": "LALProofParameterSwap: invalid constructor result\n"
+    },
+    {
+      "file": "corner-cases/subject-reduction-redex.ndjson",
+      "input_sha256": "00c6d1b7a742c440fcbc7a7f1688635a1b90263dfc6d73717eab9e4693c2dbe1",
+      "process_status": 0,
+      "stderr": ""
+    },
+    {
+      "file": "corner-cases/subject-reduction-reduct.ndjson",
+      "input_sha256": "0668cf5376e96ae938b5ba87e65a9e8ad92a6c9aa7030cdbdc284adb3ac76fcb",
+      "process_status": 1,
+      "stderr": "reduct: application type mismatch\n"
+    },
+    {
+      "file": "nested-nonuniform-param.ndjson",
+      "input_sha256": "aaab3a45abbef89db7b24cef96e7ca6a6901e87a38baeec56118846c64a75c56",
+      "process_status": 0,
+      "stderr": ""
+    }
+  ]
+}

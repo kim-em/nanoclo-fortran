@@ -1,0 +1,142 @@
+{
+  "table-opt": {
+    "file": "good/init.ndjson",
+    "input_sha256": "02a2260b17c8e5be2eb0463c7d3131c35889337b51817f56756faee1241b7b91",
+    "checker": "soa",
+    "binary_sha256": "d6e152666394e20dabe1243ff69c8a4af86922d4eb5881d2fc849005d4c56380",
+    "jobs": 4,
+    "config": null,
+    "memory_limit_kib": 22000000,
+    "timeout_seconds": 3600,
+    "command": [
+      "/home/kim/nanoclo-fortran/build/table-opt/nanoclo-fortran",
+      "--jobs=4",
+      "/home/kim/nanoclo-fortran/_tmp/arena-large/good/init.ndjson"
+    ],
+    "process_status": 0,
+    "timed_out": false,
+    "verdict_correct": true,
+    "instructions": 304072378245,
+    "virtual_cpu_seconds": 50.6787297075,
+    "peak_rss_kib": 1003644,
+    "wall_seconds": 14.23831448101555,
+    "raw": {
+      "perf": "_tmp/measurements/table-opt/good/init.perf",
+      "time": "_tmp/measurements/table-opt/good/init.time",
+      "stdout": "_tmp/measurements/table-opt/good/init.stdout",
+      "stderr": "_tmp/measurements/table-opt/good/init.stderr"
+    }
+  },
+  "bucket-opt": {
+    "file": "good/init.ndjson",
+    "input_sha256": "02a2260b17c8e5be2eb0463c7d3131c35889337b51817f56756faee1241b7b91",
+    "checker": "soa",
+    "binary_sha256": "aeec90f8d3339f678bc118484648494d2a1ccc221754f66612fd48d80e22652d",
+    "jobs": 4,
+    "config": null,
+    "memory_limit_kib": 22000000,
+    "timeout_seconds": 3600,
+    "command": [
+      "/home/kim/nanoclo-fortran/build/bucket-opt/nanoclo-fortran",
+      "--jobs=4",
+      "/home/kim/nanoclo-fortran/_tmp/arena-large/good/init.ndjson"
+    ],
+    "process_status": 0,
+    "timed_out": false,
+    "verdict_correct": true,
+    "instructions": 298469418360,
+    "virtual_cpu_seconds": 49.74490306,
+    "peak_rss_kib": 998104,
+    "wall_seconds": 14.238546943000983,
+    "raw": {
+      "perf": "_tmp/measurements/bucket-opt/good/init.perf",
+      "time": "_tmp/measurements/bucket-opt/good/init.time",
+      "stdout": "_tmp/measurements/bucket-opt/good/init.stdout",
+      "stderr": "_tmp/measurements/bucket-opt/good/init.stderr"
+    }
+  },
+  "packed-opt": {
+    "file": "good/init.ndjson",
+    "input_sha256": "02a2260b17c8e5be2eb0463c7d3131c35889337b51817f56756faee1241b7b91",
+    "checker": "soa",
+    "binary_sha256": "cc861132e35448217a90cd98ae099400eb7a13c7b3f0d79dfa9be8c56ee2cf3f",
+    "jobs": 4,
+    "config": null,
+    "memory_limit_kib": 22000000,
+    "timeout_seconds": 3600,
+    "command": [
+      "/home/kim/nanoclo-fortran/build/packed-opt/nanoclo-fortran",
+      "--jobs=4",
+      "/home/kim/nanoclo-fortran/_tmp/arena-large/good/init.ndjson"
+    ],
+    "process_status": 0,
+    "timed_out": false,
+    "verdict_correct": true,
+    "instructions": 303396306048,
+    "virtual_cpu_seconds": 50.566051008,
+    "peak_rss_kib": 1016424,
+    "wall_seconds": 16.68972051999299,
+    "raw": {
+      "perf": "_tmp/measurements/packed-opt/good/init.perf",
+      "time": "_tmp/measurements/packed-opt/good/init.time",
+      "stdout": "_tmp/measurements/packed-opt/good/init.stdout",
+      "stderr": "_tmp/measurements/packed-opt/good/init.stderr"
+    }
+  },
+  "inline-opt": {
+    "file": "good/init.ndjson",
+    "input_sha256": "02a2260b17c8e5be2eb0463c7d3131c35889337b51817f56756faee1241b7b91",
+    "checker": "soa",
+    "binary_sha256": "108d63b6f80d2eb257fdd0d84b7bed833b7503fa73e2ae11bf09bacb7c73425a",
+    "jobs": 4,
+    "config": null,
+    "memory_limit_kib": 22000000,
+    "timeout_seconds": 3600,
+    "command": [
+      "/home/kim/nanoclo-fortran/build/inline-opt/nanoclo-fortran",
+      "--jobs=4",
+      "/home/kim/nanoclo-fortran/_tmp/arena-large/good/init.ndjson"
+    ],
+    "process_status": 0,
+    "timed_out": false,
+    "verdict_correct": true,
+    "instructions": 240404830468,
+    "virtual_cpu_seconds": 40.06747174466667,
+    "peak_rss_kib": 1028760,
+    "wall_seconds": 14.041595816001063,
+    "raw": {
+      "perf": "_tmp/measurements/inline-opt/good/init.perf",
+      "time": "_tmp/measurements/inline-opt/good/init.time",
+      "stdout": "_tmp/measurements/inline-opt/good/init.stdout",
+      "stderr": "_tmp/measurements/inline-opt/good/init.stderr"
+    }
+  },
+  "bucket-inline-opt": {
+    "file": "good/init.ndjson",
+    "input_sha256": "02a2260b17c8e5be2eb0463c7d3131c35889337b51817f56756faee1241b7b91",
+    "checker": "soa",
+    "binary_sha256": "c85dc3390124add8fa5317dd40ef26c7b79abcdc4bc6d0a9a98eb692b4dd534a",
+    "jobs": 4,
+    "config": null,
+    "memory_limit_kib": 22000000,
+    "timeout_seconds": 3600,
+    "command": [
+      "/home/kim/nanoclo-fortran/build/bucket-inline-opt/nanoclo-fortran",
+      "--jobs=4",
+      "/home/kim/nanoclo-fortran/_tmp/arena-large/good/init.ndjson"
+    ],
+    "process_status": 0,
+    "timed_out": false,
+    "verdict_correct": true,
+    "instructions": 227388163807,
+    "virtual_cpu_seconds": 37.898027301166664,
+    "peak_rss_kib": 991188,
+    "wall_seconds": 14.189757431013277,
+    "raw": {
+      "perf": "_tmp/measurements/bucket-inline-opt/good/init.perf",
+      "time": "_tmp/measurements/bucket-inline-opt/good/init.time",
+      "stdout": "_tmp/measurements/bucket-inline-opt/good/init.stdout",
+      "stderr": "_tmp/measurements/bucket-inline-opt/good/init.stderr"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "fixture_only_revision": "0000000000000000000000000000000000000000",
+  "schema_valid": true,
+  "workflow_actionlint_passed": true,
+  "wrapper_checks": [
+    {
+      "input": "_tmp/arena/good/tutorial/001_basicDef.ndjson",
+      "expected_status": 0,
+      "status": 0,
+      "stderr": ""
+    },
+    {
+      "input": "_tmp/arena/bad/bogus1.ndjson",
+      "expected_status": 1,
+      "status": 1,
+      "stderr": "thm: declaration value has wrong type\n"
+    },
+    {
+      "input": "_tmp/nonexistent-checker-input",
+      "expected_status": 3,
+      "status": 3,
+      "stderr": "open: Cannot open file '/home/kim/nanoclo-fortran/_tmp/nonexistent-checker-input': No such file or directory\n"
+    }
+  ]
+}

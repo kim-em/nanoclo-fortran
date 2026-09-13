@@ -1,0 +1,4 @@
+# Preserve the standard CSV line endings and generated plotting/profile output.
+docs/*.csv whitespace=cr-at-eol
+docs/*.svg whitespace=-blank-at-eol
+docs/*profile.txt whitespace=-blank-at-eol

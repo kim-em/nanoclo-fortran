@@ -1,0 +1,10 @@
+nanoclo-fortran is a Fortran 2018 translation of nanoclo by Sebastian Graf,
+commit 4cdd12f6283ee236afc653b353566d5df59d36fe (Apache-2.0).
+nanoclo derives from nanoda_lib by ammkrn and uses algorithms and parser
+work from sokonanoda by intgrah (Apache-2.0).
+The translated files identify their upstream sources. The Fortran translation
+and struct-of-arrays implementation are modifications made in this repository.
+
+Bundled arena regression exports derive from leanprover/lean-kernel-arena and
+Lean 4 (Apache-2.0). Their source revisions and hashes are recorded in
+tests/fixtures/arena-small.json and tests/fixtures/README.md.
